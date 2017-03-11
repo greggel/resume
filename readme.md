@@ -1,5 +1,3 @@
-## About Security Fighters
-
 ## Learning Security Fundamentals and Using them
 
 ## Owning your data with encryption
