@@ -1,5 +1,3 @@
-<p align="center"><img src="http://securityfighter.com"></p>
-
 ## About Security Fighters
 
 ## Learning Security Fundamentals and Using them
