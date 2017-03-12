@@ -28,7 +28,17 @@
                 width:600px;
                 height:400px;
             }
-              body { 
+            section {
+            /* position is static by default */
+            margin-left: 200px;
+            }
+            .sidebar
+            {
+                position: absolute;
+                left: 0px;
+                width: 200px;
+            }
+            body { 
               background: #ccc;
               font-family: Open Sans;
               font-size: 13px;
@@ -176,83 +186,78 @@
                             <li>
                              <a href="{{ url('/') }}">Scripts</a>
                                 <ul class="sub">
-                                    <li><a href="">Bulldog</a></li>
-                                    <li><a href="">Mastiff</a></li>
-                                    <li><a href="">Labrador</a></li>
-                                    <li><a href="">Mutt</a></li>
+                                    <li><a href="">Windows</a></li>
+                                    <li><a href="">Linux(CentOS/RHEL)</a></li>
+                                    <li><a href="">Linux(Debian)</a></li>
+                                    <li><a href="">MacOS</a></li>
                                 </ul>
                             </li>
                             <li>
                             <a href="">About</a>
-                                <ul class="sub">
-                                    <li><a href="">Tabby</a></li>
-                                    <li><a href="">Black Cat</a></li>
-                                    <li><a href="">Wrinkly Cat</a></li>
-                                </ul>
                             </li>
                             <li>
-                            <a href="">Events</a>
-                                <ul class="sub">
-                                    <li><a href="">Humming Bird</a></li>
-                                    <li><a href="">Hawk</a></li>
-                                    <li><a href="">Crow</a></li>
-                                </ul>  
+                            <a href="">Events</a> 
                             </li>
                             <li>
                             <a href="">Blog</a>
                                 <ul class="sub">
-                                    <li><a href="">Brown Horse</a></li>
-                                    <li><a href="">Race Horse</a></li>
-                                    <li><a href="">Tall Horse</a></li>
+                                    <li><a href="">Tech</a></li>
+                                    <li><a href="">Security</a></li>
+                                    <li><a href="">Legal</a></li>
                                 </ul>  
                            </li>
                            <li>
                             <a href="">Contact</a>
-                                <ul class="sub">
-                                    <li><a href="">Cheesy</a></li>
-                                    <li><a href="">More Ketchup</a></li>
-                                    <li><a href="">Some Mustard</a></li>
-                                    <li><a href="">Extra Butter</a></li>
-                                </ul>  
-                            </li>
+                             </li>
                       </ul>
                 </nav>
              </div>
-
-             <div class="row">
-                <div class="col-md-4">
-                     <h3>First Blog Post</h3>
-                     <p>Blog Content Goes Here</p>
-                </div>
-                 <div class="col-md-4">
-                     <h3>Second Blog Post</h3>
-                     <p>Blog Content Goes Here</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Third Blog Post</h3>
-                    <p>Blog Content Goes Here</p>
-                </div>
-                    <div class="col-md-4">
-                     <h3>Fourth Blog Post</h3>
-                     <p>Blog Content Goes Here</p>
-                </div>
-                 <div class="col-md-4">
-                     <h3>Fifth Blog Post</h3>
-                     <p>Blog Content Goes Here</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Sixth Blog Post</h3>
-                    <p>Blog Content Goes Here</p>
-                </div>
-                    <div class="col-md-4">
-                     <h3>Seventh Blog Post</h3>
-                     <p>Blog Content Goes Here</p>
-                </div>
-                 <div class="col-md-4">
-                     <h3>Eighth Blog Post</h3>
-                     <p>Blog Content Goes Here</p>
-                </div>
-            </div>
+             <div class="sidebar"> 
+             <h3>About</h3>
+             <h3>Events</h3>
+             <h3>Education</h3>
+             <h3>Top 10</h3>
+             <p>asdakasdl</p>
+             <p>asdakasdl</p>
+             <p>asdakasdl</p>
+             <p>asdakasdl</p>
+             <p>asdakasdl</p>
+             </div>
+                    <div class="row">
+                        <div class="section">
+                             <h3>First Blog Post</h3>
+                             <p>Blog Content Goes Here</p>
+                        </div>
+                         <div class="section">
+                             <h3>Second Blog Post</h3>
+                             <p>Blog Content Goes Here</p>
+                        </div>
+                        <div class="section">
+                            <h3>Third Blog Post</h3>
+                            <p>Blog Content Goes Here</p>
+                        </div>
+                            <div class="section">
+                             <h3>Fourth Blog Post</h3>
+                             <p>Blog Content Goes Here</p>
+                        </div>
+                         <div class="section">
+                             <h3>Fifth Blog Post</h3>
+                             <p>Blog Content Goes Here</p>
+                        </div>
+                        <div class="section">
+                            <h3>Sixth Blog Post</h3>
+                            <p>Blog Content Goes Here</p>
+                        </div>
+                            <div class="section">
+                             <h3>Seventh Blog Post</h3>
+                             <p>Blog Content Goes Here</p>
+                        </div>
+                         <div class="section">
+                             <h3>Eighth Blog Post</h3>
+                             <p>Blog Content Goes Here</p>
+                        </div>
+                    </div>
+            
             <footer>
                 <h3>
                     <font color="white">
