@@ -5,34 +5,48 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Security Fighters</title>
 
         <!-- Fonts 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">-->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
             <style>
-            .content {
-                text-align: center;
-            }
-
             .title {
                 font-size: 64px;
+                background-color:black;
+            }
+            .content {
+                text-align: center;
             }
 
             #footer {
                 position: absolute;
                 bottom: 0;
             }
+            .relative{
+                position:relative;
+                width:600px;
+                height:400px;
+            }
               body { 
               background: #ccc;
               font-family: Open Sans;
               font-size: 13px;
-              text-transform: uppercase;
+              /*text-transform: uppercase;*/
               text-align: center;
             }
              
             .wrap {
               display: inline-block;
+            }
+            footer {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              height: 70px;
+              background-color: black;
+              width: 100%;
+              text-align: left
             }
             a {
               text-decoration: none;
@@ -141,82 +155,111 @@
             @if (Route::has('login'))
              
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Security Fighters
+                <div class="title">
+                 <font color="white">Security Fighters </font>
+                 </div>
                     <br />
                     {{ Html::image('img/hooded.jpeg', 'alt', array( 'width' => 710, 'height' => 370 )) }}
-                </div>
-
+               
                <!-- <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div> -->
+                </div> -->    
+
+                <div class="wrap">
+                    <span class="decor"></span>
+                    <nav>
+                        <ul class="primary">
+                            <li>
+                             <a href="{{ url('/') }}">Scripts</a>
+                                <ul class="sub">
+                                    <li><a href="">Bulldog</a></li>
+                                    <li><a href="">Mastiff</a></li>
+                                    <li><a href="">Labrador</a></li>
+                                    <li><a href="">Mutt</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                            <a href="">About</a>
+                                <ul class="sub">
+                                    <li><a href="">Tabby</a></li>
+                                    <li><a href="">Black Cat</a></li>
+                                    <li><a href="">Wrinkly Cat</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                            <a href="">Events</a>
+                                <ul class="sub">
+                                    <li><a href="">Humming Bird</a></li>
+                                    <li><a href="">Hawk</a></li>
+                                    <li><a href="">Crow</a></li>
+                                </ul>  
+                            </li>
+                            <li>
+                            <a href="">Blog</a>
+                                <ul class="sub">
+                                    <li><a href="">Brown Horse</a></li>
+                                    <li><a href="">Race Horse</a></li>
+                                    <li><a href="">Tall Horse</a></li>
+                                </ul>  
+                           </li>
+                           <li>
+                            <a href="">Contact</a>
+                                <ul class="sub">
+                                    <li><a href="">Cheesy</a></li>
+                                    <li><a href="">More Ketchup</a></li>
+                                    <li><a href="">Some Mustard</a></li>
+                                    <li><a href="">Extra Butter</a></li>
+                                </ul>  
+                            </li>
+                      </ul>
+                </nav>
+             </div>
+
+             <div class="row">
+                <div class="col-md-4">
+                     <h3>First Blog Post</h3>
+                     <p>Blog Content Goes Here</p>
+                </div>
+                 <div class="col-md-4">
+                     <h3>Second Blog Post</h3>
+                     <p>Blog Content Goes Here</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Third Blog Post</h3>
+                    <p>Blog Content Goes Here</p>
+                </div>
+                    <div class="col-md-4">
+                     <h3>Fourth Blog Post</h3>
+                     <p>Blog Content Goes Here</p>
+                </div>
+                 <div class="col-md-4">
+                     <h3>Fifth Blog Post</h3>
+                     <p>Blog Content Goes Here</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Sixth Blog Post</h3>
+                    <p>Blog Content Goes Here</p>
+                </div>
+                    <div class="col-md-4">
+                     <h3>Seventh Blog Post</h3>
+                     <p>Blog Content Goes Here</p>
+                </div>
+                 <div class="col-md-4">
+                     <h3>Eighth Blog Post</h3>
+                     <p>Blog Content Goes Here</p>
+                </div>
             </div>
-        
-  <!-- the content -->
-                 <div id="content">
-                    <!--<p>here is the content</p> -->
-                 </div>
- 
-            <!-- the footer -->
-                 <div id="footer">
-                   <!-- <p>Here is the footer</p> -->
-                 </div>
-
-
+            <footer>
+                <h3>
+                    <font color="white">
+                    email: gelmangreg@gmail.com <br />
+                    c: (555)555-5555</font>
+                </h3>
+            </footer>
         </div>
-        <div class="wrap">
-            <span class="decor"></span>
-            <nav>
-                <ul class="primary">
-                    <li>
-                     <a href="{{ url('/') }}">Scripts</a>
-                        <ul class="sub">
-                            <li><a href="">Bulldog</a></li>
-                            <li><a href="">Mastiff</a></li>
-                            <li><a href="">Labrador</a></li>
-                            <li><a href="">Mutt</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                    <a href="">About</a>
-                        <ul class="sub">
-                            <li><a href="">Tabby</a></li>
-                            <li><a href="">Black Cat</a></li>
-                            <li><a href="">Wrinkly Cat</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                    <a href="">Events</a>
-                        <ul class="sub">
-                            <li><a href="">Humming Bird</a></li>
-                            <li><a href="">Hawk</a></li>
-                            <li><a href="">Crow</a></li>
-                        </ul>  
-                    </li>
-                    <li>
-                    <a href="">Blog</a>
-                        <ul class="sub">
-                            <li><a href="">Brown Horse</a></li>
-                            <li><a href="">Race Horse</a></li>
-                            <li><a href="">Tall Horse</a></li>
-                        </ul>  
-                   </li>
-                   <li>
-                    <a href="">Contact</a>
-                        <ul class="sub">
-                            <li><a href="">Cheesy</a></li>
-                            <li><a href="">More Ketchup</a></li>
-                            <li><a href="">Some Mustard</a></li>
-                            <li><a href="">Extra Butter</a></li>
-                        </ul>  
-                    </li>
-              </ul>
-        </nav>
-    </body>
+   </body>
 </html>
