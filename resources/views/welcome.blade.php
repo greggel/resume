@@ -10,13 +10,28 @@
         <!-- Fonts 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">-->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
             <style>
             .title {
-                font-size: 64px;
-                background-color:black;
+                position: fixed;
+                font-family: 'Oswald', sans-serif;
+                font-size: 65px;
+                top: 0;
+                left: 0;
+                height: 70px;
+                width:500px;
+                /*background-color:black;*/
+                backface-visibility: hidden;
+                background-color: transparent;
+            
             }
-            .content {
-                text-align: center;
+            .parallax {
+                background-image: url("img/hooded.jpeg");
+                height: 1500px;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
 
             #footer {
@@ -28,9 +43,21 @@
                 width:600px;
                 height:400px;
             }
-            section {
+
+            .section {
             /* position is static by default */
-            margin-left: 200px;
+            margin-left: 300px;
+            margin-right: 300px;
+            }
+            .headshot
+            {
+                position: absolute;
+                margin-left: 100px;
+            }
+            .guitar
+            {
+                position: absolute;
+                margin-left: 760px;
             }
             .sidebar
             {
@@ -38,12 +65,68 @@
                 left: 0px;
                 width: 200px;
             }
+
+            .overlay {
+            height: 15%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            
+            transition: 0.3s;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .overlay a {font-size: 20px}
+          .overlay .closebtn {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+          }
+        }
+            h1
+            {
+                font-size:30px;
+                font-family: 'Oswald', sans-serif;
+            }
             body { 
-              background: #ccc;
+             background: #ccc;
               font-family: Open Sans;
               font-size: 13px;
               /*text-transform: uppercase;*/
               text-align: center;
+              
             }
              
             .wrap {
@@ -61,7 +144,7 @@
             a {
               text-decoration: none;
               color: #fff;
-              display: block;
+             
             }
 
             ul {
@@ -161,15 +244,44 @@
         </style>
     </head>
     <body>
-        <div class="content">
-            @if (Route::has('login'))
+                 <div class="title">
+                 <span style="font-size:50px;cursor:pointer;" onclick="openNav()">
+                    <font color="white">Greg Gelman</font>&#9776;</span>
+                </div>
+ 
+                <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <div class="overlay-content">
+                        <a href="#">Home</a>
+                        <a href="#">Scripts</a>
+                        <a href="#">Events</a>
+                        <a href="#">Education</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+
+                <script>
+                    function openNav() {
+                        document.getElementById("myNav").style.width = "100%";
+                         }
+
+                    function closeNav() {
+                         document.getElementById("myNav").style.width = "0%";
+                        }
+                </script>
+
+
+                <div class="parallax">
+                </div>
+                 
+                
+                 <!--{{ Html::image('img/hooded.jpeg', 'alt', array( 'style' => 'width:100%', 'height:100%' )) }}
+
+                  @if (Route::has('login'))
              
-            @endif
-                <div class="title">
-                 <font color="white">Security Fighters </font>
-                 </div>
-                    <br />
-                    {{ Html::image('img/hooded.jpeg', 'alt', array( 'width' => 710, 'height' => 370 )) }}
+                   @endif -->
+                   
+                    
                
                <!-- <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
@@ -177,94 +289,53 @@
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div> -->    
+                </div>  -->
 
-                <div class="wrap">
-                    <span class="decor"></span>
-                    <nav>
-                        <ul class="primary">
-                            <li>
-                             <a href="{{ url('/') }}">Scripts</a>
-                                <ul class="sub">
-                                    <li><a href="">Windows</a></li>
-                                    <li><a href="">Linux(CentOS/RHEL)</a></li>
-                                    <li><a href="">Linux(Debian)</a></li>
-                                    <li><a href="">MacOS</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                            <a href="">About</a>
-                            </li>
-                            <li>
-                            <a href="">Events</a> 
-                            </li>
-                            <li>
-                            <a href="">Blog</a>
-                                <ul class="sub">
-                                    <li><a href="">Tech</a></li>
-                                    <li><a href="">Security</a></li>
-                                    <li><a href="">Legal</a></li>
-                                </ul>  
-                           </li>
-                           <li>
-                            <a href="">Contact</a>
-                             </li>
-                      </ul>
-                </nav>
-             </div>
+                
              <div class="sidebar"> 
-             <h3>About</h3>
+             <h3>Home</h3>
+             <h3>Scripts</h3>
              <h3>Events</h3>
              <h3>Education</h3>
+             <h3>Contact</h3>
              <h3>Top 10</h3>
-             <p>asdakasdl</p>
-             <p>asdakasdl</p>
-             <p>asdakasdl</p>
-             <p>asdakasdl</p>
-             <p>asdakasdl</p>
-             </div>
-                    <div class="row">
-                        <div class="section">
-                             <h3>First Blog Post</h3>
-                             <p>Blog Content Goes Here</p>
-                        </div>
+       
+             </div>  
+                        <div class="headshot">{{ Html::image('img/headshot.png', 'alt', array( 'style' => 'width:39%', 'height:39%' )) }}</div>
                          <div class="section">
-                             <h3>Second Blog Post</h3>
-                             <p>Blog Content Goes Here</p>
+                             <h1>a little about me</h1> 
+                             <p>I am a Systems Security Analyst CISSP for my day job and an aspiring entrepeneur as my hobby.  I am highly motivated to erradicate vulnerabilities and share my experience with the world. I focus on managing, patching, securing, deploying and decomissioning small to large mixed environments (managed up to 800 systems including servers, workstations and appliances (both virtual and physical).</p>
+                             
+                             <h1> projects I tend to work on</h1>
+                             <p>
+                                 1. Script Automation Tasks <br />
+                                 2. Configuration Management <br />
+                                 3. Patch Management <br />
+                                 4. Endpoint, Infrastructure and Network Security <br />
+                                 5. VMWare ESXi Hosting <br />
+                                 6. Firewall Management <br />
+                                 7. Auditing and Compliance (Former State Investigator) <br />
+                             </p>
                         </div>
+                      
                         <div class="section">
-                            <h3>Third Blog Post</h3>
-                            <p>Blog Content Goes Here</p>
-                        </div>
-                            <div class="section">
-                             <h3>Fourth Blog Post</h3>
-                             <p>Blog Content Goes Here</p>
-                        </div>
-                         <div class="section">
-                             <h3>Fifth Blog Post</h3>
-                             <p>Blog Content Goes Here</p>
-                        </div>
-                        <div class="section">
-                            <h3>Sixth Blog Post</h3>
-                            <p>Blog Content Goes Here</p>
-                        </div>
-                            <div class="section">
-                             <h3>Seventh Blog Post</h3>
-                             <p>Blog Content Goes Here</p>
+                             <h1>what I like to do for fun</h1>
+                             <p>In my spare time I try to learn as much as I can.  Whether it is from real world experiences, socializing, spending hours on reddit, or my favorite podcasts.  I hope to become a better web developer one day.</p>
+                             <p>Outside of the technical riff raff, I like to watch movies, tv shows, pick up the guitar when I can and spend hours sitting on the couch with my wife.                                  
+                             </p>
                         </div>
                          <div class="section">
                              <h3>Eighth Blog Post</h3>
                              <p>Blog Content Goes Here</p>
                         </div>
-                    </div>
-            
+                                
             <footer>
                 <h3>
                     <font color="white">
-                    email: gelmangreg@gmail.com <br />
-                    c: (555)555-5555</font>
+                    <a href="mailto:gelmangreg@gmail.com?Subject=Hello%20Mr%20Gelman" target="_top">
+                    e: gelmangreg@gmail.com</a><a href="callto:9087520098"><br />
+                    c: (555)555-5555</a></font>
                 </h3>
             </footer>
-        </div>
    </body>
 </html>
