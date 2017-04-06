@@ -33,11 +33,19 @@ Route::get('/', function() {
 	//$image = Html::image('/public/hooded.jpeg');
 });
 
+Route::get('/register', 'RegisterController@register'); 
+Route::post('/register', 'RegisterController@register'); 
+
+
 Route::get('about', function () {
 
 		$people = ['Taylor', 'Matt', 'Jeffrey'];
     	return view('pages.about',compact('people')); //resources/views/pages/about.blade.php
 		//return view('pages.about', compact('people'));
+
+    });
+
+Route::get('emails.register', function () {
 
     });
 
