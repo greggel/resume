@@ -451,9 +451,7 @@
                         
                        
                                 
-            <footer>
- 
-        
+            <footer>        
                 <h3 class="footerLeft">
                     <font color="white">
                     <a href="mailto:gelmangreg@gmail.com?Subject=Hello%20Mr%20Gelman" target="_top">
