@@ -22,19 +22,19 @@
           text-align: center;
           background-color: black;    
         }
-            
+
         #footer {
           position: fixed;
           bottom: 0;
         }
-        
+
         .relative{
           position:relative;
           width:600px;
           height:400px;
         }
 
-        .side {
+  .side {
           position: relative;
           height: 100vh;
           width: 50%;
@@ -42,21 +42,22 @@
           float: right;
           object-position: center;
           background-color: #ADD8E6;
+   text-align:center;
         }
 
         .side h1 {
-          margin-top:46%;
+    margin: 500px auto 0;
         }
 
         .sideText {
           background-position: center;
-          background-color: #778899;
+          background-color: #4169E1;
           margin-top: 37%;
         }
 
         .section1 {
           position: relative;
-          background-color: #778899;
+          background-color: #4169E1;
           background-image: url("img/face.png");
           height: 100vh;
           width: 50%;
@@ -71,20 +72,20 @@
         .section2Side {
           position: relative;
           background-color: #ADD8E6;
-          height: 100vh;
-          width: 25%;
+          height: 40vh;
           display: block;
           float: left;
         }
 
         .section2Side h1 {
-            margin-top:56%;
+            margin-top:4%;
+            font-size: 45px;
         }
       
-        .section2Side2 {
+/*        .section2Side2 {
           position: relative;
           background-color: #ADD8E6;
-          height: 100vh;
+          height: 66vh;
           width: 25%;
           display: block;
           float: left;
@@ -92,10 +93,37 @@
 
         .section2Side2 h1 {
             margin-top:56%;
+            font-size: 45px;
+        } */
+
+        .section2Side3 {
+          position: relative;
+          width: 50%;
+          margin-top: 155px;
+          /* display: inline-block; */
+          float: left;
+        }
+
+        .section2Side3 h1 {
+            font-size: 45px;
+        }
+
+        .section2Side4 {
+             position: relative;
+             background-color: #ADD8E6;
+             width: 50%;
+             /* float: right; */
+             margin-top: 154px;
+             height: 331px;
+             float: right;
+        }
+
+        .section2Side4 h1 {
+            font-size: 45px;
         }
         
         .section2 {
-          background-color: #778899;
+          background-color: #4169E1;
           height: 100vh;
           width: 50%;
           display: block;
@@ -107,12 +135,30 @@
         /* position is static by default */
         }
 
+        .section2box 
+        {
+          position: relative;
+          background-color: #ADD8E6;
+          height: 100vh;
+          width: 50%;
+          float: left;
+        }
+
         .section2 h1:first-of-type {
           margin-top: 24%;
         }
 
         .section2 li {
           text-align: center;
+          font-size: 24px;
+        }
+
+        .section2 h1 {
+          font-size: 60px;
+        }
+
+        .section2 h2 {
+          font-size: 30px;
         }
 
         .section3 {
@@ -273,6 +319,12 @@
           border-bottom-right-radius: 8px;
           border-bottom-left-radius: 8px;
         }
+        
+        .icons{
+          display:inline-block;
+           margin: -2px 0px 0px 23px;
+         /* margin: 20px 30px 0 30px; */
+        }
 
         @media screen and (max-width: 480px) {
 
@@ -289,22 +341,20 @@
 
           .section1 {
             width: 100%;
+            height: 357px;
+            background-size: 300px 300px;
+            background-position: 43% 111%;
             margin: auto;
-            text-align: left;
+            text-align: left
           }
-	  
+    
           span {
             font-size:39px;
             cursor:pointer;
             text-align: center;
           }
 
-          .section2 {
-            width: 100%;
-            margin-top:0;
-            height: 500px;
-            text-align: left;
-          }
+          
 
           .section2 h1:first-of-type {
             margin-top: 0;
@@ -314,6 +364,33 @@
             text-align: center;
           }
 
+          .section2 li {
+          text-align: center;
+          font-size: 15px;
+          }
+
+          .section2 h1 {
+          font-size: 30px;
+          }
+
+          .section2 h2 {
+          font-size: 20px;
+          }
+          
+          .section2 {
+            width: 100%;
+            margin-top:0;
+            height: auto;
+            text-align: left;
+          }
+          
+          .section2box 
+          {
+            position: relative;
+            background-color: #ADD8E6;
+            height: 100vh;
+            width: 100%;
+          }
 
           .section2Side {
             width: 100%;
@@ -327,14 +404,38 @@
 
           .section2Side2 {
             height: auto;
-            width: auto;
+            width: 100%;
             text-align: left;
-            background-color: #778899;
+            background-color: #4169E1;
           }
 
           .section2Side2 h1 {
             margin-top:0;
+          }
+
+
+          .section2Side3 {
+              position: relative;
+              background-color: #ADD8E6;
+              width: 100%;
+              height: 83px;
+              display: block;
+              float: none;
+              margin-top: 0;
         }
+
+          .section2Side4 {
+            width: 100%;
+            /* height: 12px; */
+            /* text-align: left; */
+            /* float: none; */
+            height: 311px;
+            background-color: #4169E1;
+            float: none;
+            /* display: block; */
+          }
+
+
 
           .title {
             width: auto;
@@ -367,6 +468,25 @@
         </style>
     </head>
     <body> 
+    <script>      
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1678417975792547',
+          xfbml      : true,
+          version    : 'v2.6'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));      
+    </script>
+
+
     <div class="section1">
     <a name="about"></a>
     </div>
@@ -375,7 +495,15 @@
          <h1>a little about me... <br />
             <p>CISSP Systems Security Analyst.  Aspiring entrepeneur who loves a good challenge.</p><br />
            what I can do for you <br />
-          <p>Technology Consulting, Development and System Administration with a focus on Security and Risk Management</p></h1>
+          <p>Technology Consulting, Software/Web Development and System Administration through Automation Techniques with a focus on Security and Risk Management</p></h1>
+    <p>
+    <div
+      style="vertical-align: sub;width: 238px;"
+        class="fb-like"
+        data-share="true"
+        data-show-faces="true">
+    </div>
+    </p>
     </div>
     <div class="section2">
               <a name="education"></a>
@@ -391,36 +519,78 @@
                 Security+</h2>
             
     </div>
-    <div class="section2Side">
-            <p>
-               <ol><h1>High Level Strengths</h1>
-                <li>Scripting and Automation</li>
-                <li>Configuration Management</li>
-                <li>Patch Management</li>
-                <li>Endpoint and Network Security</li>
-                <li>Firewalls</li>
-                <li>VMWare ESXi/vSphere Administration</li>
-                <li>Auditing and Compliance </li>
-                <li>Investigation Reports (i9)</li>
-                <li>Auditing and Compliance </li>
-                <li>Vulnerability Scanning/Remediation</li>
-            </p>
-   </div>
+   <div class="section2box">
+            <div class="section2Side3">
+                     <ol><h1>Experience</h1>
+                     <li>Systems Security Analyst 2015-Current</li>
+                     <li>State IT Investigator/Auditor 2013-2015</li>
+                     <li>Unix Computer Operator 2013</li>
+                     <li>Web Developer and IT Consultant 2011-2013</li>
+                     </ol>
+            </div> 
+            <div class="section2Side4">
+                       <ol><h1>Currently Working</h1>
+                       <li>Scripting and Automation to help patch 1000's of networked devices</li>
+                       <li>Laravel PHP</li>
+                       <li>Digital Forensic Investigation Techniques</li>
+                       <li>Nessus and OpenVAS Vulnerability Scanning and Remediation - Private Networks</li>
+                       <li>VMWare Vlans</li>
+                       <li>PfSense Virtual Firewalls</li>
+                        </ol>
+           </div>
+            <div class="section2Side">
+                        <div class=icons>
+                        <br /><br /><br />
+                          <img width="80" height="40" src="img/logos/puppet-labs-logo.png" />
+                          <img width="90" height="80" src="img/logos/apache.png" />
+                          <img width="80" height="80" src="img/logos/logo-composer-transparent2.png" />
+                          <img width="80" height="80" src="img/logos/Apple-logo.png" />
+                          <img width="80" height="80" src="img/logos/css3.png" />
+                          <img width="90" height="80" src="img/logos/mongo-db-huge-logo-1024x341.png" />
+                          <img width="80" height="80" src="img/logos/C++-unofficial.sh-600x600.png" />
+                          <img width="80" height="80" src="img/logos/AD1.png" />
+                          <img width="80" height="80" src="img/logos/android.png" />
+                          <img width="80" height="80" src="img/logos/linux_u2.png" />
+                          <img width="90" height="80" src="img/logos/vmware-logo.png" />
+                          <img width="90" height="30" src="img/logos/graylog.png" />
+                          <img width="80" height="80" src="img/logos/microsoft.png" />
+                          <img width="80" height="80" src="img/logos/curl-logo.png" />
+                          <img width="90" height="80" src="img/logos/Dell-KACE-logo.png" />
+                          <img width="80" height="80" src="img/logos/Debian.png" />
+                          <img width="80" height="80" src="img/logos/git.sh-600x600.png" />              
+                          <img width="80" height="80" src="img/logos/html5.png" />
+                          <img width="70" height="30" src="img/logos/Veeam-Logo.png" />
+                          <img width="90" height="80" src="img/logos/java-logo-transparent.png " />
+                          <img width="80" height="80" src="img/logos/kali-linux.png" />
+                          <img width="80" height="80" src="img/logos/laravel.png" />
+                          <img width="80" height="80" src="img/logos/mcafee.png" />
+                          <img width="80" height="80" src="img/logos/wireshark.png" />
+                          <img width="80" height="80" src="img/logos/page-mysql.png" />
+                          <img width="80" height="80" src="img/logos/PHP-Logo.png " />
+                          <img width="80" height="80" src="img/logos/python.png" />
+                          <img width="80" height="80" src="img/logos/redhat.png" />
+                          <img width="80" height="80" src="img/logos/symantec.png" />
+                          <img width="80" height="80" src="img/logos/Tor.png" />
+                          <img width="80" height="80" src="img/logos/Ubuntu.png" />
+                          <img width="80" height="80" src="img/logos/wordpress.png" />
+                          <img width="100" height="80" src="img/logos/checkpoint_color.png" />
+                        </div><br /><br /><br />
 
-   <div class="section2Side2">
-               <ol><h1>Low Level Strengths</h1>
-                <li>Bash, Batch, Powershell, PHP</li>
-                <li>Puppet, Dell KACE, Group Policy</li>
-                <li>Puppet, Dell KACE, Group Policy</li>
-                <li>McAfee, Qualys, EMET, Juniper</li>
-                <li>IPTables, Fail2Ban, Checkpoint, Cisco</li>
-                <li>VMWare ESXi/vSphere Administration</li>
-                <li>Sarbanes Oxley, DFARS, State Regulations </li>
-                <li>Investigation Reports (i9)</li>
-                <li>Two(2) years experience as State Investigator IT Auditor</li>
-                <li>OpenVAS, Nessus, McAfee Foundstone, Qualys</li></ol>
-   </div>
-    
+                       <!--<ol><h1>Technologies</h1>
+                        <li>Bash, Batch, Powershell</li>
+                        <li>PHP, HTML, CSS, JavaScript</li>
+                        <li>Java, C++, Python, Perl, Ruby</li>
+                        <li>Puppet, Dell KACE, Group Policy</li>
+                        <li>Active Directory, DNS, DHCP</li>
+                        <li>McAfee, Qualys, EMET, Juniper</li>
+                        <li>IPTables, Fail2Ban, Checkpoint, Cisco</li>
+                        <li>VMWare ESXi/vSphere Administration</li>
+                        <li>OpenVAS, Nessus, McAfee Foundstone</li>
+                        <li>Sarbanes Oxley, DFARS, State Regulations </li>
+                        <li>Forensic IT Investigation Reporting (i9)</li>
+                        </ol>-->
+           </div>
+  </div>
         <div class="title">
           <span>
             <font color="white">
@@ -442,16 +612,13 @@
                          document.getElementById("myNav").style.width = "0%";
                         }
                 </script>-->
-                
                <div class="section3">
 
                </div>
                <div class="section4">
                 </div>
-                        
-                       
-                                
-            <footer>        
+
+            <footer>
                 <h3 class="footerLeft">
                     <font color="white">
                     <a href="mailto:gelmangreg@gmail.com?Subject=Hello%20Mr%20Gelman" target="_top">
@@ -461,7 +628,8 @@
                 <h3 class="footerRight">
                   <font color="white">
                     <a href="https://linkedin.com/in/greggel">LinkedIn</a>
-                    <a href="https://github.com/greggel">Github</a><br />
+                    <a href="https://github.com/greggel">Github</a>
+                    <a href="/img/GregGelmanResume.pdf" download>Resume</a><br />
                     <form class="formEmail" action="/register" methods="POST" name="myForm" id="myForm">
              {{ csrf_field() }} <input type="email" name="email" autocomplete="off" placeholder="email me if I can help!" class="email" style="width: 125px;">&nbsp;<input type="submit" class="submit" style="width: 55px;">
             </form>
