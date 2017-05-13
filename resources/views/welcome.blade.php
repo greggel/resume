@@ -34,19 +34,25 @@
           height:400px;
         }
 
-  .side {
-          position: relative;
-          height: 100vh;
-          width: 50%;
-          display: block;
-          float: right;
-          object-position: center;
-          background-color: #ADD8E6;
-   text-align:center;
+        .side {
+        position: relative;
+        height: 100vh;
+        width: 50%;
+        /* display: block; */
+        float: right;
+        right: 0;
+        object-position: center;
+        background-color: #ADD8E6;
+        background-position: 50% 50%;
+        text-align: center;
         }
 
         .side h1 {
-    margin: 500px auto 0;
+    margin: 32% auto 0;
+        }
+
+        .side p {
+          margin-top:100px;
         }
 
         .sideText {
@@ -58,13 +64,12 @@
         .section1 {
           position: relative;
           background-color: #4169E1;
-          background-image: url("img/face.png");
+          background-image: url(img/face.png);
           height: 100vh;
           width: 50%;
           display: block;
+          left: 0;
           float: left;
-          /*background-attachment: fixed;
-          background-size: cover;*/
           background-position: 50% 50%;
           background-repeat: no-repeat;
         }
@@ -72,7 +77,7 @@
         .section2Side {
           position: relative;
           background-color: #ADD8E6;
-          height: 40vh;
+          height: 83%;
           display: block;
           float: left;
         }
@@ -99,7 +104,7 @@
         .section2Side3 {
           position: relative;
           width: 50%;
-          margin-top: 155px;
+          /* margin-top: 155px; */
           /* display: inline-block; */
           float: left;
         }
@@ -108,44 +113,71 @@
             font-size: 45px;
         }
 
+        .section2Side3 li {
+          margin-top:70px;
+        }
+
         .section2Side4 {
-             position: relative;
-             background-color: #ADD8E6;
-             width: 50%;
-             /* float: right; */
-             margin-top: 154px;
-             height: 331px;
-             float: right;
+          position: relative;
+          background-color: #ADD8E6;
+          width: 50%;
+          /* float: right; */
+          /* margin-top: 154px; */
+          /* height: 331px; */
+          float: right;
         }
 
         .section2Side4 h1 {
             font-size: 45px;
+            margin-top:0;
+        }
+
+        .section2Side4 li {
+          margin-top:40px;
         }
         
         .section2 {
-          background-color: #4169E1;
+          /*background-color: #4169E1;
           height: 100vh;
           width: 50%;
           display: block;
           float: right;
           /*background-attachment: fixed;
-          background-size: cover;*/
+          background-size: cover;
           background-position: 50% 50%;
           background-repeat: no-repeat;
         /* position is static by default */
         }
-
-        .section2box 
+        
+        .section2boxLeft 
         {
           position: relative;
+          /* margin-top: 881px; */
           background-color: #ADD8E6;
-          height: 100vh;
+          height: 100%;
           width: 50%;
           float: left;
+          left: 0;
+          display: block;
+        }
+        .section2boxRight 
+        {
+            position: relative;
+            /* margin-top: 881px; */
+            background-color: #4169E1;
+            height: 100%;
+            width: 50%;
+            display: block;
+            right: 0;
+            float: right;
+        }
+
+        .section2boxRight li {
+          margin-top:120px;
         }
 
         .section2 h1:first-of-type {
-          margin-top: 24%;
+          /*margin-top: 24%;*/
         }
 
         .section2 li {
@@ -264,6 +296,7 @@
         body { 
           margin:0px;
           background: #ccc;
+          background-color: #4169E1;
           font-family: Open Sans;
           /*text-transform: uppercase;*/
           text-align: center; 
@@ -271,6 +304,7 @@
 
         ol {
           text-align: left;
+          margin-top:0;
         }
 
         li {
@@ -322,39 +356,64 @@
         
         .icons{
           display:inline-block;
-           margin: -2px 0px 0px 23px;
-         /* margin: 20px 30px 0 30px; */
+         /* overflow:scroll;
+          margin: 20px 30px 0 30px; */
         }
 
-        @media screen and (max-width: 480px) {
-
-
+        @media screen and (max-width: 768px) {
+           
+         .section1 {
+            width: 100%;
+            height: 347px;
+            background-size: 270px 263px;
+            background-position: 50% 90%;
+            margin: auto;
+            text-align: left;
+            position: relative;
+          }
           .side {
             width: 100%;
             height: auto;
-            text-align: left;
+            text-align: center;
+            position: relative;
           }
           
           .side h1 {
           margin-top:0;
           }
 
-          .section1 {
-            width: 100%;
-            height: 357px;
-            background-size: 300px 300px;
-            background-position: 43% 111%;
-            margin: auto;
-            text-align: left
-          }
-    
+           .side p {
+          margin-top:0px;
+        }
+
           span {
             font-size:39px;
             cursor:pointer;
             text-align: center;
           }
 
+          .section2boxLeft 
+        {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          /* float: left; */
+          /* display: block; */
+          margin-top: 0;
+        }
+
+        .section2boxLeft li {
+          margin-top:0;
+        }
+
+        .section2boxRight 
+        {
+          position: relative;
+          width: 100%;
+          margin-top:0;
           
+          /* float: inherit; */
+        }
 
           .section2 h1:first-of-type {
             margin-top: 0;
@@ -366,6 +425,7 @@
 
           .section2 li {
           text-align: center;
+          margin-top:0;
           font-size: 15px;
           }
 
@@ -381,7 +441,7 @@
             width: 100%;
             margin-top:0;
             height: auto;
-            text-align: left;
+            text-align: center;
           }
           
           .section2box 
@@ -396,6 +456,7 @@
             width: 100%;
             height: auto;
             text-align: left;
+            position: relative;
           }
 
           .section2Side h1 {
@@ -404,6 +465,7 @@
 
           .section2Side2 {
             height: auto;
+            position: relative;
             width: 100%;
             text-align: left;
             background-color: #4169E1;
@@ -418,24 +480,39 @@
               position: relative;
               background-color: #ADD8E6;
               width: 100%;
-              height: 83px;
+              /*height: 83px;*/
               display: block;
               float: none;
               margin-top: 0;
         }
+
+          .section2Side3 li {
+             margin-top:0;
+          }
 
           .section2Side4 {
             width: 100%;
             /* height: 12px; */
             /* text-align: left; */
             /* float: none; */
-            height: 311px;
+            height: 256px;
             background-color: #4169E1;
             float: none;
+            position: relative;
             /* display: block; */
           }
 
+          .icons {
+            margin: 0px 0px 0px 23px;;
+          }
 
+          ol {
+            text-align:center;
+          }
+
+          li {
+            text-align: center;
+          }
 
           .title {
             width: auto;
@@ -503,94 +580,94 @@
         data-share="true"
         data-show-faces="true">
     </div>
+
     </p>
     </div>
-    <div class="section2">
-              <a name="education"></a>
-              <h1>Education</h1>
-                 <h2><ul>University of Delaware: Masters of Engieering</ul></h2>
-                 <li>CyberSecurity (Currently Enrolled)</li>
-                <h2><ul>Rutgers University: Bachelors of Arts</ul></h2>
-                <li>Information Technology and Informatics</li>
-                <h2><ul>Raritan Valley Community College: Associates Degree </ul></h2> 
-                <li>Business Administration</li>
-                <h1>Certificates</h1>
-                <h2>CISSP<br />
-                Security+</h2>
-            
-    </div>
-   <div class="section2box">
+    <div class="section2boxRight">
+        <div class="section2">
+                  <a name="education"></a>
+                  <h1>Education</h1>
+                     <h2><ul>University of Delaware: Masters of Engieering</ul></h2>
+                     <li>CyberSecurity (Currently Enrolled)</li>
+                    <h2><ul>Rutgers University: Bachelors of Arts</ul></h2>
+                    <li>Information Technology and Informatics</li>
+                    <h2><ul>Raritan Valley Community College: Associates Degree </ul></h2> 
+                    <li>Business Administration</li>
+                    <h1>Certificates</h1>
+                    <h2>CISSP<br />
+                    Security+</h2>
+                
+        </div>
+   <div class="right-half">
+   </div>
+   </div>
+
+
+   <div class="section2boxLeft">
             <div class="section2Side3">
-                     <ol><h1>Experience</h1>
-                     <li>Systems Security Analyst 2015-Current</li>
-                     <li>State IT Investigator/Auditor 2013-2015</li>
-                     <li>Unix Computer Operator 2013</li>
-                     <li>Web Developer and IT Consultant 2011-2013</li>
+                     <ol style="margin-top:0;"><h1 style="font-size:38px;margin-top:0;">Experience</h1>
+                     <li>Systems Security Analyst</li>
+                     <li>State IT Investigator/Auditor</li>
+                     <li>Unix Computer Operator</li>
+                     <li>Web Developer and IT Consultant</li>
                      </ol>
             </div> 
             <div class="section2Side4">
-                       <ol><h1>Currently Working</h1>
-                       <li>Scripting and Automation to help patch 1000's of networked devices</li>
-                       <li>Laravel PHP</li>
+                       <ol><h1 style="font-size:38px">Projects</h1>
+                       <li>Scripting and Automation Services</li>
+                       <li>Laravel PHP Development</li>
+                       <li>Backup Administration</li>
                        <li>Digital Forensic Investigation Techniques</li>
-                       <li>Nessus and OpenVAS Vulnerability Scanning and Remediation - Private Networks</li>
-                       <li>VMWare Vlans</li>
-                       <li>PfSense Virtual Firewalls</li>
+                       <li>Vulnerability Scanning and Remediation</li>
+                       <li>VMWare and Cloud Infrastructure</li>
+                       <li>PfSense Virtual Firewalls and Enterprise Firewall Administration</li>
                         </ol>
            </div>
             <div class="section2Side">
-                        <div class=icons>
-                        <br /><br /><br />
-                          <img width="80" height="40" src="img/logos/puppet-labs-logo.png" />
-                          <img width="90" height="80" src="img/logos/apache.png" />
-                          <img width="80" height="80" src="img/logos/logo-composer-transparent2.png" />
-                          <img width="80" height="80" src="img/logos/Apple-logo.png" />
+                     <div class=icons>
+                        <br />
+                          <img width="90" height="80" src="img/logos/puppet-labs-logo.png" />
+                          <img width="70" height="70" src="img/logos/bash.png" />
+                          <img width="105" height="60" src="img/logos/Dell-KACE-logo.png" />
+                          <img width="70" height="60" src="img/logos/powershell-icon-0.png" />
                           <img width="80" height="80" src="img/logos/css3.png" />
-                          <img width="90" height="80" src="img/logos/mongo-db-huge-logo-1024x341.png" />
-                          <img width="80" height="80" src="img/logos/C++-unofficial.sh-600x600.png" />
-                          <img width="80" height="80" src="img/logos/AD1.png" />
-                          <img width="80" height="80" src="img/logos/android.png" />
-                          <img width="80" height="80" src="img/logos/linux_u2.png" />
-                          <img width="90" height="80" src="img/logos/vmware-logo.png" />
-                          <img width="90" height="30" src="img/logos/graylog.png" />
-                          <img width="80" height="80" src="img/logos/microsoft.png" />
-                          <img width="80" height="80" src="img/logos/curl-logo.png" />
-                          <img width="90" height="80" src="img/logos/Dell-KACE-logo.png" />
-                          <img width="80" height="80" src="img/logos/Debian.png" />
-                          <img width="80" height="80" src="img/logos/git.sh-600x600.png" />              
                           <img width="80" height="80" src="img/logos/html5.png" />
-                          <img width="70" height="30" src="img/logos/Veeam-Logo.png" />
-                          <img width="90" height="80" src="img/logos/java-logo-transparent.png " />
-                          <img width="80" height="80" src="img/logos/kali-linux.png" />
-                          <img width="80" height="80" src="img/logos/laravel.png" />
-                          <img width="80" height="80" src="img/logos/mcafee.png" />
-                          <img width="80" height="80" src="img/logos/wireshark.png" />
+                          <img width="90" height="80" src="img/logos/apache.png" />
                           <img width="80" height="80" src="img/logos/page-mysql.png" />
+                          <img width="90" height="80" src="img/logos/mongo-db-huge-logo-1024x341.png" />
+                          <img width="80" height="80" src="img/logos/laravel.png" />
+                          <img width="90" height="80" src="img/logos/vmware-logo.png" />
+                          <img width="80" height="80" src="img/logos/AD1.png" />
+                          <img width="80" height="80" src="img/logos/microsoft.png" />
+                          <img width="80" height="80" src="img/logos/linux_u2.png" />
+                          <img width="80" height="80" src="img/logos/Apple-logo.png" />
+                          <img width="80" height="80" src="img/logos/redhat.png" />
+                          <img width="80" height="80" src="img/logos/Debian.png" />
+                          <img width="80" height="80" src="img/logos/Ubuntu.png" />
+                          <img width="80" height="80" src="img/logos/android.png" />
                           <img width="80" height="80" src="img/logos/PHP-Logo.png " />
                           <img width="80" height="80" src="img/logos/python.png" />
-                          <img width="80" height="80" src="img/logos/redhat.png" />
-                          <img width="80" height="80" src="img/logos/symantec.png" />
-                          <img width="80" height="80" src="img/logos/Tor.png" />
-                          <img width="80" height="80" src="img/logos/Ubuntu.png" />
-                          <img width="80" height="80" src="img/logos/wordpress.png" />
+                          <img width="80" height="80" src="img/logos/C++-unofficial.sh-600x600.png" />
+                          <img width="90" height="80" src="img/logos/java-logo-transparent.png " />
+                          <img width="80" height="80" src="img/logos/mcafee.png" />
+                          <img width="80" height="80" src="img/logos/curl-logo.png" />
+                          <img width="160" height="80" src="img/logos/nessus.png" />
+                          <img width="80" height="80" src="img/logos/openvas.png" />
                           <img width="100" height="80" src="img/logos/checkpoint_color.png" />
-                        </div><br /><br /><br />
-
-                       <!--<ol><h1>Technologies</h1>
-                        <li>Bash, Batch, Powershell</li>
-                        <li>PHP, HTML, CSS, JavaScript</li>
-                        <li>Java, C++, Python, Perl, Ruby</li>
-                        <li>Puppet, Dell KACE, Group Policy</li>
-                        <li>Active Directory, DNS, DHCP</li>
-                        <li>McAfee, Qualys, EMET, Juniper</li>
-                        <li>IPTables, Fail2Ban, Checkpoint, Cisco</li>
-                        <li>VMWare ESXi/vSphere Administration</li>
-                        <li>OpenVAS, Nessus, McAfee Foundstone</li>
-                        <li>Sarbanes Oxley, DFARS, State Regulations </li>
-                        <li>Forensic IT Investigation Reporting (i9)</li>
-                        </ol>-->
+                          <img width="90" height="80" src="img/logos/pfsense.png" />
+                          <img width="90" height="90" src="img/logos/splunk.png" /> 
+                          <img width="70" height="40" src="img/logos/graylog.png" />
+                          <img width="80" height="80" src="img/logos/symantec.png" />
+                          <img width="70" height="30" src="img/logos/Veeam-Logo.png" />
+                          <img width="80" height="80" src="img/logos/git.sh-600x600.png" />              
+                          <img width="80" height="80" src="img/logos/wireshark.png" />
+                          <img width="80" height="80" src="img/logos/wordpress.png" />                        
+                    </div><br /><br /><br />
            </div>
+        <div class="right-half">
+        </div>
   </div>
+
         <div class="title">
           <span>
             <font color="white">
@@ -622,8 +699,8 @@
                 <h3 class="footerLeft">
                     <font color="white">
                     <a href="mailto:gelmangreg@gmail.com?Subject=Hello%20Mr%20Gelman" target="_top">
-                    e: gelmangreg@gmail.com</a><a href="callto:9087520098"><br />
-                    c: (609)516-8588</a></font>
+                    e: gelmangreg@gmail.com</a><a href="callto:6093168588"><br />
+                    c: (609)316-8588</a></font>
                 </h3>
                 <h3 class="footerRight">
                   <font color="white">
