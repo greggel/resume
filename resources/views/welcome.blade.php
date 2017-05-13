@@ -12,6 +12,9 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <style>
+        #resume {
+
+        }
 
         .title {
           position: fixed;
@@ -45,6 +48,11 @@
         background-color: #ADD8E6;
         background-position: 50% 50%;
         text-align: center;
+        margin:0px;
+        padding:0px;
+        margin-left:0px;
+        padding-left:0px;
+        padding-top:0px;
         }
 
         .side h1 {
@@ -72,6 +80,11 @@
           float: left;
           background-position: 50% 50%;
           background-repeat: no-repeat;
+          margin:0px;
+          padding:0px;
+          margin-left:0px;
+          padding-left:0px;
+          padding-top:0px;
         }
 
         .section2Side {
@@ -173,24 +186,24 @@
         }
 
         .section2boxRight li {
-          margin-top:120px;
+          /*margin-top:100px;*/
         }
 
         .section2 h1:first-of-type {
-          /*margin-top: 24%;*/
+          margin-top: 0;
         }
 
         .section2 li {
           text-align: center;
-          font-size: 24px;
+          font-size: 17px;
         }
 
         .section2 h1 {
-          font-size: 60px;
+          /*font-size: 60px;*/
         }
 
         .section2 h2 {
-          font-size: 30px;
+          /*font-size: 30px;*/
         }
 
         .section3 {
@@ -201,6 +214,12 @@
         .section4 {
          position: relative;
         /* position is static by default */
+        }
+
+        .section5 {
+          position: relative;
+          width: 100%;
+
         }
             
         .sidebar
@@ -356,6 +375,8 @@
         
         .icons{
           display:inline-block;
+           background-color: #ECECEA;
+           margin:auto;
          /* overflow:scroll;
           margin: 20px 30px 0 30px; */
         }
@@ -503,7 +524,8 @@
           }
 
           .icons {
-            margin: 0px 0px 0px 23px;;
+           /* margin: 0px 0px 0px 23px;;*/
+           width:100%;
           }
 
           ol {
@@ -563,30 +585,39 @@
       }(document, 'script', 'facebook-jssdk'));      
     </script>
 
-
     <div class="section1">
     <a name="about"></a>
     </div>
+
     <div class="side">
 
          <h1>a little about me... <br />
             <p>CISSP Systems Security Analyst.  Aspiring entrepeneur who loves a good challenge.</p><br />
            what I can do for you <br />
-          <p>Technology Consulting, Software/Web Development and System Administration through Automation Techniques with a focus on Security and Risk Management</p></h1>
-    <p>
-    <div
-      style="vertical-align: sub;width: 238px;"
-        class="fb-like"
-        data-share="true"
-        data-show-faces="true">
-    </div>
+          <p>Technology Consulting, Software/Web Development and System Administration through Automation Techniques with a strong focus on Security and Risk Management</p></h1>
+      <p>
+        <div
+          style="vertical-align: sub;"
+            class="fb-like"
+            data-share="true"
+            data-show-faces="true">
+        </div>
 
-    </p>
+      </p>
     </div>
+    <div class="title">
+          <span>
+            <font color="white">
+             <a href="#about">about</a>
+             <a href="https://github.com/greggel">portfolio</a>
+             <a href="#education">education</a></font>         
+          </span>
+    </div> 
+
     <div class="section2boxRight">
         <div class="section2">
                   <a name="education"></a>
-                  <h1>Education</h1>
+                  <h1 style="font-size:38px">Education</h1>
                      <h2><ul>University of Delaware: Masters of Engieering</ul></h2>
                      <li>CyberSecurity (Currently Enrolled)</li>
                     <h2><ul>Rutgers University: Bachelors of Arts</ul></h2>
@@ -598,8 +629,6 @@
                     Security+</h2>
                 
         </div>
-   <div class="right-half">
-   </div>
    </div>
 
 
@@ -622,8 +651,10 @@
                        <li>VMWare and Cloud Infrastructure</li>
                        <li>PfSense Virtual Firewalls and Enterprise Firewall Administration</li>
                         </ol>
-           </div>
-            <div class="section2Side">
+           </div>   
+   </div>
+
+   <div class="section5">
                      <div class=icons>
                         <br />
                           <img width="90" height="80" src="img/logos/puppet-labs-logo.png" />
@@ -663,19 +694,7 @@
                           <img width="80" height="80" src="img/logos/wireshark.png" />
                           <img width="80" height="80" src="img/logos/wordpress.png" />                        
                     </div><br /><br /><br />
-           </div>
-        <div class="right-half">
-        </div>
-  </div>
-
-        <div class="title">
-          <span>
-            <font color="white">
-             <a href="#about">about</a>
-             <a href="https://github.com/greggel">portfolio</a>
-             <a href="#education">education</a></font>         
-          </span>
-    </div>      
+           </div>     
 
                 <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
 
@@ -713,8 +732,8 @@
                   </font>
                 </h3>
 
+   
             </footer>
-
 
    </body>
 </html>
