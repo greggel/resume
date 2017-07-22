@@ -7,7 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class EmailsController extends Controller
 {
     /**
      * Send an e-mail reminder to the user.
@@ -19,7 +19,7 @@ class UserController extends Controller
     public function sendEmailReminder(Request $request, $id)
     {
      
-        Mail::send('emails.contact', $request->all(), function ($message) {
+        Mail::send('emails.sendEmailReminder', $request->all(), function ($message) {
             $message->from('info@securityfighter.com', 'Security Fighter');
             $message->to('gelmangreg@gmail.com')->subject('new interest!');
         });

@@ -103,6 +103,14 @@ return [
         ],
     ],
 
+    'custom' => [
+         'name' => [
+            'required' => 'Fix your e-mail address!',
+            'unique' => 'Your email is already registered!',
+    ],
+
+],
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes

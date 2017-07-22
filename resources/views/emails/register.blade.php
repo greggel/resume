@@ -1,8 +1,10 @@
 <html>
 <body>
 
-Welcome,<br>
-Your email address is: {{ $email }}<br>
+
+
+Attention!<br>
+A new interest has been found.  The email address is: {{$email}} <br>
 
 
 </body>

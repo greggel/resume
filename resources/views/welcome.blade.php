@@ -22,10 +22,16 @@
           height:88px;
           width:100%;
           white-space:nowrap;
-          text-align: center;
+          z-index:1;
           background-color: black;    
         }
-
+        
+        .fb_iframe_widget {
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        }
+        
         #footer {
           position: fixed;
           bottom: 0;
@@ -54,13 +60,23 @@
         padding-left:0px;
         padding-top:0px;
         }
+        
+        .side span
+        {
+        vertical-align: bottom;
+        width: 450px;
+        /* height: 218px; */
+        left: 20%;
+        }
 
         .side h1 {
     margin: 32% auto 0;
+    height:34%;
         }
 
         .side p {
           margin-top:100px;
+          height:10%;
         }
 
         .sideText {
@@ -150,6 +166,7 @@
         }
         
         .section2 {
+          margin-top:25%;
           /*background-color: #4169E1;
           height: 100vh;
           width: 50%;
@@ -167,18 +184,24 @@
           position: relative;
           /* margin-top: 881px; */
           background-color: #ADD8E6;
-          height: 100%;
+          height: 100vh;
           width: 50%;
           float: left;
           left: 0;
           display: block;
         }
+
+        .section2Left
+        {
+          margin-top:25%;
+        }
+
         .section2boxRight 
         {
             position: relative;
             /* margin-top: 881px; */
             background-color: #4169E1;
-            height: 100%;
+            height: 100vh;
             width: 50%;
             display: block;
             right: 0;
@@ -381,8 +404,30 @@
           margin: 20px 30px 0 30px; */
         }
 
+        div.fb-like.fb_iframe_widget {
+            vertical-align: bottom;
+            border: none;
+            visibility: visible;
+            width: 205px !important;
+            height: 100px;
+          } 
+            
+           .fb-like.fb_iframe_widget span {
+            width: 205px !important;
+          }
+
+           .fb-like.fb_iframe_widget iframe{
+            width: 205px !important;
+          }
+
+          .fb_iframe_widget {
+            display: inline-block;
+            position: relative;
+            z-index: 0 !important;
+          }
+
         @media screen and (max-width: 768px) {
-           
+         
          .section1 {
             width: 100%;
             height: 347px;
@@ -423,6 +468,11 @@
           margin-top: 0;
         }
 
+        .section2Left
+        {
+          margin-top:0%;
+        }
+
         .section2boxLeft li {
           margin-top:0;
         }
@@ -431,6 +481,7 @@
         {
           position: relative;
           width: 100%;
+          height:100%;
           margin-top:0;
           
           /* float: inherit; */
@@ -585,35 +636,35 @@
       }(document, 'script', 'facebook-jssdk'));      
     </script>
 
-    <div class="section1">
-    <a name="about"></a>
-    </div>
-
-    <div class="side">
-
-         <h1>a little about me... <br />
-            <p>CISSP Systems Security Analyst.  Aspiring entrepeneur who loves a good challenge.</p><br />
-           what I can do for you <br />
-          <p>Technology Consulting, Software/Web Development and System Administration through Automation Techniques with a strong focus on Security and Risk Management</p></h1>
-      <p>
-        <div
-          style="vertical-align: sub;"
-            class="fb-like"
-            data-share="true"
-            data-show-faces="true">
-        </div>
-
-      </p>
-    </div>
-    <div class="title">
+        <div class="title">
           <span>
             <font color="white">
              <a href="#about">about</a>
              <a href="https://github.com/greggel">portfolio</a>
              <a href="#education">education</a></font>         
           </span>
-    </div> 
+    </div>
 
+    <div class="section1">
+    <a name="about"></a>
+
+    </div>
+
+    <div class="side">
+
+         <h1>a little about me... <br />
+            <p>CISSP Systems Security Analyst.  Aspiring entrepeneur who loves a good challenge. <br /><br />I also love tacos, netflix and warm weather!</p><br /><br />
+           what I can do for you
+          <p>Web Application Development and System Administration with a strong focus on Security and Automation</p></h1> 
+       <p> 
+        <div
+          style="vertical-align: sub;"
+            class="fb-like"
+            data-share="true"
+            data-show-faces="true">
+        </div>
+      </p>
+    </div> 
     <div class="section2boxRight">
         <div class="section2">
                   <a name="education"></a>
@@ -630,13 +681,13 @@
                 
         </div>
    </div>
-
-
+  
    <div class="section2boxLeft">
+       <div class="section2Left">
             <div class="section2Side3">
                      <ol style="margin-top:0;"><h1 style="font-size:38px;margin-top:0;">Experience</h1>
                      <li>Systems Security Analyst</li>
-                     <li>State IT Investigator/Auditor</li>
+                     <li>State Forensic IT Investigator</li>
                      <li>Unix Computer Operator</li>
                      <li>Web Developer and IT Consultant</li>
                      </ol>
@@ -648,10 +699,11 @@
                        <li>Backup Administration</li>
                        <li>Digital Forensic Investigation Techniques</li>
                        <li>Vulnerability Scanning and Remediation</li>
-                       <li>VMWare and Cloud Infrastructure</li>
-                       <li>PfSense Virtual Firewalls and Enterprise Firewall Administration</li>
+                       <li>VMWare and Virtual Infrastructure</li>
+                       <li>Firewall Administration</li>
                         </ol>
-           </div>   
+           </div>
+      </div>   
    </div>
 
    <div class="section5">
@@ -723,11 +775,20 @@
                 </h3>
                 <h3 class="footerRight">
                   <font color="white">
+                      <ul>
+                      @foreach($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                      </ul>
+
+                      <ul>
+                      <p>{{ $errors->first('email') }}</p>
+                      </ul>
                     <a href="https://linkedin.com/in/greggel">LinkedIn</a>
                     <a href="https://github.com/greggel">Github</a>
                     <a href="/img/GregGelmanResume.pdf" download>Resume</a><br />
-                    <form class="formEmail" action="/register" methods="POST" name="myForm" id="myForm">
-             {{ csrf_field() }} <input type="email" name="email" autocomplete="off" placeholder="email me if I can help!" class="email" style="width: 125px;">&nbsp;<input type="submit" class="submit" style="width: 55px;">
+                    <form class="formEmail" action="register" methods="POST" name="myForm" id="myForm">
+             {{ csrf_field() }} <input type="email" name="email" autocomplete="off" placeholder="leave your email here!" class="email" style="width: 125px;">&nbsp;<input type="submit" class="submit" style="width: 55px;">
             </form>
                   </font>
                 </h3>

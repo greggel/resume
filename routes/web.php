@@ -33,10 +33,9 @@ Route::get('/', function() {
 	//$image = Html::image('/public/hooded.jpeg');
 });
 
-Route::get('/register', 'RegisterController@register'); 
-Route::post('/register', 'RegisterController@register'); 
-
-
+Route::post('/register', 'RegisterController@register')->middleware('visitor'); 
+Route::get('/register', 'RegisterController@register')->middleware('visitor');
+  
 Route::get('about', function () {
 
 		$people = ['Taylor', 'Matt', 'Jeffrey'];
@@ -47,6 +46,9 @@ Route::get('about', function () {
 
 Route::get('emails.register', function () {
 
+
     });
+
+
 
 
