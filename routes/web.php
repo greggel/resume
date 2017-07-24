@@ -32,7 +32,6 @@ Route::get('/', function() {
 	
 	//$image = Html::image('/public/hooded.jpeg');
 });
-
 Route::post('/register', 'RegisterController@register')->middleware('visitor'); 
 Route::get('/register', 'RegisterController@register')->middleware('visitor');
   

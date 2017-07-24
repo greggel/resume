@@ -4,7 +4,9 @@
 
 
 Attention!<br>
-A new interest has been found.  The email address is: {{$email}} <br>
+A new interest has been found.  Their email address is: {{$emails}} and they left you the following comment: <br><br>
+
+{{$text}}
 
 
 </body>

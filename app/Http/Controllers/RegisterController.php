@@ -19,17 +19,21 @@ class RegisterController extends Controller
     {	
 
 
-      $v = Validator::make($request->all(), [
-          'name' => 'required|email|unique:addresses'
+      $this->validate($request, [
+          'emails' => 'required|unique:addresses,name'        
+      ]);
+  /*  
+       $v = Validator::make($request->all(), [
+          'name' => 'bail|required|email|unique:addresses'
           
       ]);
 
-/*      if ($v->fails())
+      if ($v->fails())
       {
           return redirect()->back()->withErrors($v->errors());
       }*/
 
-      $emails = Input::get('email');
+      $emails = Input::get('emails');
       DB::table('addresses')->insert(
         ['name' => $emails]
       );
@@ -49,14 +53,18 @@ class RegisterController extends Controller
      /*Schema::table('addresses', function (Blueprint $table) {
         $table->timestamp('created_at');
         $table->increments('id');
-      });*/
-      
-
- 
-
-    	
+      });*/  	
     }
 
+    /*public function withValidator($validator){
+
+        $validator->after(function ($validator) {
+            if ($this->somethingElseIsInvalid()) {
+                $validator->errors()->add('field', 'Something is wrong with this field!');
+            }
+        });
+
+    }*/
     
 }
 

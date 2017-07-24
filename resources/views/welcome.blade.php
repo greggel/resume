@@ -37,6 +37,8 @@
           bottom: 0;
         }
 
+
+
         .relative{
           position:relative;
           width:600px;
@@ -235,8 +237,8 @@
         }
 
         .section4 {
-         position: relative;
-        /* position is static by default */
+         padding-bottom: 48px;
+         margin-top: -39px;
         }
 
         .section5 {
@@ -366,8 +368,12 @@
           width: 700px;
           position: fixed;
           text-align: right;
-          bottom: 0;
+          bottom: 8px;
           right: 0;
+         }
+
+         .footerRight a {
+          margin-right:26px;
          }
 
          .formEmail {
@@ -408,8 +414,9 @@
             vertical-align: bottom;
             border: none;
             visibility: visible;
+            padding-top: 16%;
             width: 205px !important;
-            height: 100px;
+            height: 10% !important;
           } 
             
            .fb-like.fb_iframe_widget span {
@@ -720,7 +727,7 @@
                           <img width="90" height="80" src="img/logos/mongo-db-huge-logo-1024x341.png" />
                           <img width="80" height="80" src="img/logos/laravel.png" />
                           <img width="90" height="80" src="img/logos/vmware-logo.png" />
-                          <img width="80" height="80" src="img/logos/AD1.png" />
+                          <img width="80" height="80" src="img/logos/Aaad1.png" />
                           <img width="80" height="80" src="img/logos/microsoft.png" />
                           <img width="80" height="80" src="img/logos/linux_u2.png" />
                           <img width="80" height="80" src="img/logos/Apple-logo.png" />
@@ -764,6 +771,28 @@
 
                </div>
                <div class="section4">
+                  <font color="white">Feel Free to contact me/let me know your interested in my help by leaving your email address.  No job is too large!</font>
+                          <form class="emails" action="register" methods="POST" name="emails" id="emails"
+                           
+                           {{ csrf_field() }} 
+
+                           <input type="textarea" name="text" autocomplete="off" placeholder="comment" style="width: 250px;">
+
+                           <input type="email" name="emails" autocomplete="off" placeholder="email" class="emails" style="width: 125px;">&nbsp;
+
+                           <input type="submit" class="submit" style="width: 134px;">
+
+                          </form>
+
+                        @if ($errors->any())
+                          <div class="alert alert-danger">
+                              <ul>
+                              @foreach($errors->all() as $error)
+                                  <p>{{ $errors->first('emails') }}</p>
+                               @endforeach
+                              </ul>
+                          </div>
+                        @endif
                 </div>
 
             <footer>
@@ -775,21 +804,10 @@
                 </h3>
                 <h3 class="footerRight">
                   <font color="white">
-                      <ul>
-                      @foreach($errors->all() as $error)
-                          <li>{{ $error }}</li>
-                      @endforeach
-                      </ul>
-
-                      <ul>
-                      <p>{{ $errors->first('email') }}</p>
-                      </ul>
                     <a href="https://linkedin.com/in/greggel">LinkedIn</a>
                     <a href="https://github.com/greggel">Github</a>
                     <a href="/img/GregGelmanResume.pdf" download>Resume</a><br />
-                    <form class="formEmail" action="register" methods="POST" name="myForm" id="myForm">
-             {{ csrf_field() }} <input type="email" name="email" autocomplete="off" placeholder="leave your email here!" class="email" style="width: 125px;">&nbsp;<input type="submit" class="submit" style="width: 55px;">
-            </form>
+
                   </font>
                 </h3>
 
