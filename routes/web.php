@@ -26,12 +26,12 @@
 });
 */
 
-Route::get('/', function() {
+Route::get('/', [
+	'middleware' =>'stranger',
+	function() {
+		return view('welcome');	
+}]);
 
-	return view('welcome');
-	
-	//$image = Html::image('/public/hooded.jpeg');
-});
 Route::post('/register', 'RegisterController@register')->middleware('visitor'); 
 Route::get('/register', 'RegisterController@register')->middleware('visitor');
   
@@ -43,10 +43,13 @@ Route::get('about', function () {
 
     });
 
-Route::get('emails.register', function () {
+/*Route::get('/hits', function() {
 
+	return View::make('pages.hits')->with('data', App\hits::all()->where('hits','>',1));
 
-    });
+});*/
+
+Route::get('/hits', 'hitViews@ipHits');
 
 
 

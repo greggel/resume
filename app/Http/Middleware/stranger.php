@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class before
+class stranger
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,7 @@ class before
      */
     public function handle($request, Closure $next)
     {
-        Stranger::hit();
+        strangerVisitor::hit();
         return $next($request);
     }
 }

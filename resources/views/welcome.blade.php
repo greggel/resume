@@ -16,20 +16,32 @@
 
         }
 
-        .title {
+        .face {
+          height:275px;
+          margin:105px 95px auto;
+        }
+
+        .faceShot {
+          
+          }
+
+        /*.title {
           position: fixed;
           font-family: 'Oswald', sans-serif;
           height:88px;
           width:100%;
           white-space:nowrap;
-          z-index:1;
+          z-index:4;
           background-color: black;    
-        }
+        }*/
+
+
         
         .fb_iframe_widget {
         display: inline-block;
         position: relative;
         z-index: 2;
+        margin-top:100px;
         }
         
         #footer {
@@ -37,30 +49,41 @@
           bottom: 0;
         }
 
+          .section1 {
+          position: relative;
+          background-color: #a7cdf2;
+          height: 400px;
+          width: 20%;
+          display: block;
+          left: 0;
+          float: left;
+          background-position: 50% 90%;
+          background-repeat: no-repeat;
+          margin:-80px;
+          padding:0px;
+          margin-left:0px;
+          padding-left:0px;
+          padding-top:0px;
+          z-index: 3;
+        }
 
-
-        .relative{
-          position:relative;
+        .relative
+       {   position:relative;
           width:600px;
           height:400px;
         }
 
+        .sideText {
+        margin-top: 126px;
+        margin-bottom: 109px;
+        height: 30%;
+        width: 1000px;
+        margin-left: 409px;
+        z-index: 1;
+        }
         .side {
-        position: relative;
-        height: 100vh;
-        width: 50%;
-        /* display: block; */
-        float: right;
-        right: 0;
-        object-position: center;
-        background-color: #ADD8E6;
-        background-position: 50% 50%;
-        text-align: center;
-        margin:0px;
-        padding:0px;
-        margin-left:0px;
-        padding-left:0px;
-        padding-top:0px;
+        width: 80%;
+        margin:-45px;
         }
         
         .side span
@@ -72,37 +95,14 @@
         }
 
         .side h1 {
-    margin: 32% auto 0;
-    height:34%;
+        height: 47px;
+        margin: -52px 126px 3px 0;
         }
 
         .side p {
-          margin-top:100px;
-          height:10%;
-        }
-
-        .sideText {
-          background-position: center;
-          background-color: #4169E1;
-          margin-top: 37%;
-        }
-
-        .section1 {
-          position: relative;
-          background-color: #4169E1;
-          background-image: url(img/face.png);
-          height: 100vh;
-          width: 50%;
-          display: block;
-          left: 0;
-          float: left;
-          background-position: 50% 50%;
-          background-repeat: no-repeat;
-          margin:0px;
-          padding:0px;
-          margin-left:0px;
-          padding-left:0px;
-          padding-top:0px;
+          /*margin-top:100px;
+          height:10%;*/
+          margin:-5px 351px 11px -27px;
         }
 
         .section2Side {
@@ -127,7 +127,7 @@
           float: left;
         }
 
-        .section2Side2 h1 {
+        .section2Side2- h1 {
             margin-top:56%;
             font-size: 45px;
         } */
@@ -168,25 +168,14 @@
         }
         
         .section2 {
-          margin-top:25%;
-          /*background-color: #4169E1;
-          height: 100vh;
-          width: 50%;
-          display: block;
-          float: right;
-          /*background-attachment: fixed;
-          background-size: cover;
-          background-position: 50% 50%;
-          background-repeat: no-repeat;
-        /* position is static by default */
+          margin-top:11px;
+          line-height: 22px;
+          vertical-align: middle;
         }
         
         .section2boxLeft 
         {
-          position: relative;
-          /* margin-top: 881px; */
-          background-color: #ADD8E6;
-          height: 100vh;
+          position: relative;       
           width: 50%;
           float: left;
           left: 0;
@@ -195,15 +184,21 @@
 
         .section2Left
         {
-          margin-top:25%;
+          /* margin-top: 25%; */
+          background: black;
+          padding: 12px;
+          /* padding-bottom: 21px; */
+          width: 579px;
+          overflow: hidden;
+          height: 400px;
+          margin-left: 55px;
         }
 
         .section2boxRight 
         {
             position: relative;
-            /* margin-top: 881px; */
-            background-color: #4169E1;
-            height: 100vh;
+            height:424px;
+            background-color: #a7cdf2;
             width: 50%;
             display: block;
             right: 0;
@@ -237,12 +232,13 @@
         }
 
         .section4 {
-         padding-bottom: 48px;
-         margin-top: -39px;
+         padding-bottom: 35px;
+         background-color:  #a7cdf2;
         }
 
         .section5 {
           position: relative;
+          display:inline-block;
           width: 100%;
 
         }
@@ -252,10 +248,6 @@
          position: absolute;
          left: 0px;
          width: 200px;
-        }
-      
-       .submit {
-         width:4px;
         }
 
         .overlay {
@@ -332,7 +324,7 @@
         }
 
         h3 {
-          font-size:15px;
+          font-size:17px;
           margin-top:0px;
           margin-bottom: 0px;
         }
@@ -340,7 +332,7 @@
         body { 
           margin:0px;
           background: #ccc;
-          background-color: #4169E1;
+          background-color: #a7cdf2;
           font-family: Open Sans;
           /*text-transform: uppercase;*/
           text-align: center; 
@@ -361,15 +353,17 @@
           left: 0;
           background-color: black;
           width: 100%;
-          text-align: left
+          text-align: center;
+          z-index: 3;
          }
 
          .footerRight {
           width: 700px;
           position: fixed;
           text-align: right;
-          bottom: 8px;
+          bottom: 10px;
           right: 0;
+          z-index: 3;
          }
 
          .footerRight a {
@@ -404,60 +398,89 @@
         
         .icons{
           display:inline-block;
-           background-color: #ECECEA;
-           margin:auto;
          /* overflow:scroll;
           margin: 20px 30px 0 30px; */
         }
-
-        div.fb-like.fb_iframe_widget {
-            vertical-align: bottom;
-            border: none;
-            visibility: visible;
-            padding-top: 16%;
-            width: 205px !important;
-            height: 10% !important;
-          } 
             
            .fb-like.fb_iframe_widget span {
-            width: 205px !important;
+            width: 335px !important;
           }
 
            .fb-like.fb_iframe_widget iframe{
-            width: 205px !important;
+                width: 282px !important;
+                margin: 46px 58px auto;
           }
 
-          .fb_iframe_widget {
-            display: inline-block;
-            position: relative;
-            z-index: 0 !important;
+          input {
+            height: 21px;
+            margin-bottom:10px;
+            width: 260px;
+          }
+
+          #googleMap {
+              width: 100%;
+              height: 400px;
           }
 
         @media screen and (max-width: 768px) {
-         
-         .section1 {
-            width: 100%;
-            height: 347px;
-            background-size: 270px 263px;
-            background-position: 50% 90%;
+           hr {
+            width: 0;
+           }
+
+           .fb_iframe_widget {
+              z-index: 2;
+              margin-top:13%;
+           }
+
+
+           .fb-like.fb_iframe_widget iframe{
+            margin: 172px -25px auto;
+            /* margin-top: 148px; */
+            width: 100% !important;
+          }
+
+           .fb-like.fb_iframe_widget table{
+            width: 205px !important;
+          }
+
+         /*.section1 {
+            width: 340px;
+            height: 240px;
+            background-size: 200px 240px;
+            background-position: 50% 80%;
             margin: auto;
             text-align: left;
             position: relative;
+          }*/
+          .face {
+            margin: 100px auto;
+            height: 365px;
           }
           .side {
+            width:100%;
+
+          }
+
+          .sideText {
+            margin: 30px 43px;
+            /* height: 137%; */
             width: 100%;
-            height: auto;
-            text-align: center;
             position: relative;
+          
           }
           
           .side h1 {
-          margin-top:0;
+            height: 0;
+            margin: 0 auto;
           }
 
            .side p {
           margin-top:0px;
         }
+
+          .section1 {
+            width: 100%;
+          }
 
           span {
             font-size:39px;
@@ -470,14 +493,12 @@
           position: relative;
           height: 100%;
           width: 100%;
-          /* float: left; */
-          /* display: block; */
-          margin-top: 0;
         }
 
         .section2Left
         {
-          margin-top:0%;
+          margin: 0 auto;
+          width: 79%;
         }
 
         .section2boxLeft li {
@@ -488,14 +509,14 @@
         {
           position: relative;
           width: 100%;
-          height:100%;
-          margin-top:0;
+          height:460px;
+          margin-top:20%;
           
           /* float: inherit; */
         }
 
           .section2 h1:first-of-type {
-            margin-top: 0;
+            margin-top: 34px;
           }
 
           .section2 p {
@@ -510,6 +531,7 @@
 
           .section2 h1 {
           font-size: 30px;
+
           }
 
           .section2 h2 {
@@ -518,9 +540,6 @@
           
           .section2 {
             width: 100%;
-            margin-top:0;
-            height: auto;
-            text-align: center;
           }
           
           .section2box 
@@ -608,7 +627,7 @@
           .footerLeft {
             width: 100%;
             margin: auto;
-            text-align: left;
+            text-align: center;
           }
 
           .footerRight {
@@ -625,193 +644,241 @@
         </style>
     </head>
     <body> 
-    <script>      
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1678417975792547',
-          xfbml      : true,
-          version    : 'v2.6'
-        });
-      };
+              <!--<div class="title">
+                    <span>
+                      <font color="white">
+                       <a href="#about">about</a>
+                       <a href="https://github.com/greggel">portfolio</a>
+                       <a href="#education">education</a></font>         
+                    </span>
+              </div>-->
 
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));      
-    </script>
+              <div class="section1">
+                <div class="faceShot">
+                  <img src="img/face.png" class="face" />
+                  <a name="about"></a>
+                </div>
+              </div>
 
-        <div class="title">
-          <span>
-            <font color="white">
-             <a href="#about">about</a>
-             <a href="https://github.com/greggel">portfolio</a>
-             <a href="#education">education</a></font>         
-          </span>
-    </div>
-
-    <div class="section1">
-    <a name="about"></a>
-
-    </div>
-
-    <div class="side">
-
-         <h1>a little about me... <br />
-            <p>CISSP Systems Security Analyst.  Aspiring entrepeneur who loves a good challenge. <br /><br />I also love tacos, netflix and warm weather!</p><br /><br />
-           what I can do for you
-          <p>Web Application Development and System Administration with a strong focus on Security and Automation</p></h1> 
-       <p> 
-        <div
-          style="vertical-align: sub;"
-            class="fb-like"
-            data-share="true"
-            data-show-faces="true">
-        </div>
-      </p>
-    </div> 
-    <div class="section2boxRight">
-        <div class="section2">
-                  <a name="education"></a>
-                  <h1 style="font-size:38px">Education</h1>
-                     <h2><ul>University of Delaware: Masters of Engieering</ul></h2>
-                     <li>CyberSecurity (Currently Enrolled)</li>
-                    <h2><ul>Rutgers University: Bachelors of Arts</ul></h2>
-                    <li>Information Technology and Informatics</li>
-                    <h2><ul>Raritan Valley Community College: Associates Degree </ul></h2> 
-                    <li>Business Administration</li>
-                    <h1>Certificates</h1>
-                    <h2>CISSP<br />
-                    Security+</h2>
-                
-        </div>
-   </div>
-  
-   <div class="section2boxLeft">
-       <div class="section2Left">
-            <div class="section2Side3">
-                     <ol style="margin-top:0;"><h1 style="font-size:38px;margin-top:0;">Experience</h1>
-                     <li>Systems Security Analyst</li>
-                     <li>State Forensic IT Investigator</li>
-                     <li>Unix Computer Operator</li>
-                     <li>Web Developer and IT Consultant</li>
-                     </ol>
-            </div> 
-            <div class="section2Side4">
-                       <ol><h1 style="font-size:38px">Projects</h1>
-                       <li>Scripting and Automation Services</li>
-                       <li>Laravel PHP Development</li>
-                       <li>Backup Administration</li>
-                       <li>Digital Forensic Investigation Techniques</li>
-                       <li>Vulnerability Scanning and Remediation</li>
-                       <li>VMWare and Virtual Infrastructure</li>
-                       <li>Firewall Administration</li>
-                        </ol>
-           </div>
-      </div>   
-   </div>
-
-   <div class="section5">
-                     <div class=icons>
-                        <br />
-                          <img width="90" height="80" src="img/logos/puppet-labs-logo.png" />
-                          <img width="70" height="70" src="img/logos/bash.png" />
-                          <img width="105" height="60" src="img/logos/Dell-KACE-logo.png" />
-                          <img width="70" height="60" src="img/logos/powershell-icon-0.png" />
-                          <img width="80" height="80" src="img/logos/css3.png" />
-                          <img width="80" height="80" src="img/logos/html5.png" />
-                          <img width="90" height="80" src="img/logos/apache.png" />
-                          <img width="80" height="80" src="img/logos/page-mysql.png" />
-                          <img width="90" height="80" src="img/logos/mongo-db-huge-logo-1024x341.png" />
-                          <img width="80" height="80" src="img/logos/laravel.png" />
-                          <img width="90" height="80" src="img/logos/vmware-logo.png" />
-                          <img width="80" height="80" src="img/logos/Aaad1.png" />
-                          <img width="80" height="80" src="img/logos/microsoft.png" />
-                          <img width="80" height="80" src="img/logos/linux_u2.png" />
-                          <img width="80" height="80" src="img/logos/Apple-logo.png" />
-                          <img width="80" height="80" src="img/logos/redhat.png" />
-                          <img width="80" height="80" src="img/logos/Debian.png" />
-                          <img width="80" height="80" src="img/logos/Ubuntu.png" />
-                          <img width="80" height="80" src="img/logos/android.png" />
-                          <img width="80" height="80" src="img/logos/PHP-Logo.png " />
-                          <img width="80" height="80" src="img/logos/python.png" />
-                          <img width="80" height="80" src="img/logos/C++-unofficial.sh-600x600.png" />
-                          <img width="90" height="80" src="img/logos/java-logo-transparent.png " />
-                          <img width="80" height="80" src="img/logos/mcafee.png" />
-                          <img width="80" height="80" src="img/logos/curl-logo.png" />
-                          <img width="160" height="80" src="img/logos/nessus.png" />
-                          <img width="80" height="80" src="img/logos/openvas.png" />
-                          <img width="100" height="80" src="img/logos/checkpoint_color.png" />
-                          <img width="90" height="80" src="img/logos/pfsense.png" />
-                          <img width="90" height="90" src="img/logos/splunk.png" /> 
-                          <img width="70" height="40" src="img/logos/graylog.png" />
-                          <img width="80" height="80" src="img/logos/symantec.png" />
-                          <img width="70" height="30" src="img/logos/Veeam-Logo.png" />
-                          <img width="80" height="80" src="img/logos/git.sh-600x600.png" />              
-                          <img width="80" height="80" src="img/logos/wireshark.png" />
-                          <img width="80" height="80" src="img/logos/wordpress.png" />                        
-                    </div><br /><br /><br />
-           </div>     
-
-                <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
-
-                <!--
-                <script>
-                    function openNav() {
-                        document.getElementById("myNav").style.width = "100%";
-                         }
-
-                    function closeNav() {
-                         document.getElementById("myNav").style.width = "0%";
-                        }
-                </script>-->
-               <div class="section3">
-
-               </div>
-               <div class="section4">
-                  <font color="white">Feel Free to contact me/let me know your interested in my help by leaving your email address.  No job is too large!</font>
-                          <form class="emails" action="register" methods="POST" name="emails" id="emails"
-                           
-                           {{ csrf_field() }} 
-
-                           <input type="textarea" name="text" autocomplete="off" placeholder="comment" style="width: 250px;">
-
-                           <input type="email" name="emails" autocomplete="off" placeholder="email" class="emails" style="width: 125px;">&nbsp;
-
-                           <input type="submit" class="submit" style="width: 134px;">
-
-                          </form>
-
-                        @if ($errors->any())
-                          <div class="alert alert-danger">
-                              <ul>
-                              @foreach($errors->all() as $error)
-                                  <p>{{ $errors->first('emails') }}</p>
-                               @endforeach
-                              </ul>
-                          </div>
-                        @endif
+              <div class="side">
+                <div class="facebookLike">  
+                  <div
+                    style="vertical-align: sub;"
+                      class="fb-like"
+                      data-share="true"
+                      data-show-faces="true">
+                  </div>
                 </div>
 
-            <footer>
-                <h3 class="footerLeft">
+                <div class="sideText">
+                  <h1>CISSP Systems Security Analyst, Systems Administrator and Entrepeneur</h1><br /><br /><hr/>
+                      
+                </div>
+
+            <script>      
+              window.fbAsyncInit = function() {
+                FB.init({
+                  appId      : '1678417975792547',
+                  xfbml      : true,
+                  version    : 'v2.6'
+                });
+              };
+
+              (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));      
+            </script>
+          </div>
+               
+              <div class="section2boxRight">
+                  <div class="section2">
+                            <a name="education"></a>
+                            <h1 style="font-size:38px">Education</h1>
+                               <h2><ul>University of Delaware: Masters of Engineering</ul></h2>
+                               <li>CyberSecurity (Currently Enrolled)</li>
+                              <h2><ul>Rutgers University: Bachelors of Arts</ul></h2>
+                              <li>Information Technology and Informatics</li>
+                              <h2><ul>Raritan Valley Community College: Associates Degree </ul></h2> 
+                              <li>Business Administration</li>
+                              <h1>Certificates</h1>
+                              <h2>CISSP<br />
+                              Security+</h2>
+                          
+                  </div>
+             </div>
+            
+             <div class="section2boxLeft">
+                 <div class="section2Left">
+                    <!--
+                      <div class="section2Side3">
+                               <ol style="margin-top:0;"><h1 style="font-size:38px;margin-top:0;">Experience</h1>
+                               <li>Systems Security Analyst</li>
+                               <li>State Forensic IT Investigator</li>
+                               <li>Unix Computer Operator</li>
+                               <li>Web Developer and IT Consultant</li>
+                               </ol>
+                      </div> 
+                      <div class="section2Side4">
+                      
+                                 <ol><h1 style="font-size:38px">Projects</h1>
+                                 <li>Scripting and Automation Services</li>
+                                 <li>Laravel PHP Development</li>
+                                 <li>Backup Administration</li>
+                                 <li>Digital Forensic Investigation Techniques</li>
+                                 <li>Vulnerability Scanning and Remediation</li>
+                                 <li>VMWare and Virtual Infrastructure</li>
+                                 <li>Firewall Administration</li>
+                                  </ol>  
+                     </div>
+                  -->
+                 <div id="googleMap"></div>
+                 <script>
+                    var map, infoWindow;
+                    function initMap() {
+                      map = new google.maps.Map(document.getElementById('googleMap'), {
+                        center: {lat: 40.2170534, lng: -74.74293840000001},
+                        zoom: 7
+                      });
+                    
+              var contentString = 
+               '<div id="markerContent">'+
+               '<h3>'+'e: gelmangreg@gmail.com'+'</h3>'+
+               '<h3>'+'c: (609)316-8588'+
+               '<a href="https://linkedin.com/in/greggel">'+
+               '<font color="black">'+'<br /><br />LinkedIn<br />'+'</a>'+'</font>'+
+               '<a href="https://github.com/greggel">'+
+               '<font color="black">'+'Github<br />'+'</a>'+'</font>'+
+               '<a href="/img/GregGelmanResume.pdf" download>'+
+               '<font color="black">'+'Resume'+'</a>'+'</font>'+
+               '<div id="markerContent">'
+               ;
+
+              var infowindow = new google.maps.InfoWindow({
+                content: contentString
+              });
+
+               var marker = new google.maps.Marker({
+                 position: {lat: 40.2170534, lng: -74.74293840000001},
+                 map: map,
+                 title: 'info'
+               });
+        
+                marker.addListener('click', function() {
+                  infowindow.open(map, marker);
+                });
+
+
+                    }
+
+                  </script>
+                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyDlTiKrTcprGMI9K2-ANpT0FZyFrkjbs&callback=initMap"
+                  async defer></script>
+                </div>   
+             </div>
+
+             <div class="section5">
+                               <div class=icons>
+                                  <br />
+                                    <img height="60" src="img/logos/puppet-labs-logo.png" />
+                                    <img height="60" src="img/logos/bash.png" />
+                                    <img height="60" src="img/logos/Dell-KACE-logo.png" />
+                                    <img height="60" src="img/logos/powershell-icon-0.png" />
+                                    <img height="60" src="img/logos/css3.png" />
+                                    <img height="60" src="img/logos/html5.png" />
+                                    <img height="60" src="img/logos/apache.png" />
+                                    <img height="60" src="img/logos/page-mysql.png" />
+                                    <img height="60" src="img/logos/mongo-db-huge-logo-1024x341.png" />
+                                    <img height="60" src="img/logos/laravel.png" />
+                                    <img height="60" src="img/logos/vmware-logo.png" />
+                                    <img height="60" src="img/logos/Aaad1.png" />
+                                    <img height="60" src="img/logos/microsoft.png" />
+                                    <img height="60" src="img/logos/linux_u2.png" />
+                                    <img height="60" src="img/logos/Apple-logo.png" />
+                                    <img height="60" src="img/logos/redhat.png" />
+                                    <img height="60" src="img/logos/Debian.png" />
+                                    <img height="60" src="img/logos/Ubuntu.png" />
+                                    <img height="60" src="img/logos/android.png" />
+                                    <img height="60" src="img/logos/PHP-Logo.png " />
+                                    <img height="60" src="img/logos/python.png" />
+                                    <img height="60" src="img/logos/C++-unofficial.sh-600x600.png" />
+                                    <img height="60" src="img/logos/java-logo-transparent.png " />
+                                    <img height="60" src="img/logos/mcafee.png" />
+                                    <img height="90" src="img/logos/curl-logo.png" />
+                                    <img height="50" src="img/logos/nessus.png" />
+                                    <img height="60" src="img/logos/openvas.png" />
+                                    <img height="60" src="img/logos/checkpoint_color.png" />
+                                    <img height="60" src="img/logos/pfsense.png" />
+                                    <img height="60" src="img/logos/splunk.png" /> 
+                                    <img height="40" src="img/logos/graylog.png" />
+                                    <img height="60" src="img/logos/symantec.png" />
+                                    <img height="40" src="img/logos/Veeam-Logo.png" />
+                                    <img height="60" src="img/logos/git.sh-600x600.png" />              
+                                    <img height="60" src="img/logos/wireshark.png" />
+                                    <img height="60" src="img/logos/wordpress.png" />                        
+                              </div>
+                     </div>     
+
+                          <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+
+                          <!--
+                          <script>
+                              function openNav() {
+                                  document.getElementById("myNav").style.width = "100%";
+                                   }
+
+                              function closeNav() {
+                                   document.getElementById("myNav").style.width = "0%";
+                                  }
+                          </script>-->
+                         <div class="section3">
+
+                         </div>
+                         <div class="section4">
+                            <font color="white">Leave me a comment</font>
+                                    <form class="emails" action="register" methods="POST" name="emails" id="emails">
+                                     
+                                     {{ csrf_field() }} 
+
+                                     <input type="textarea" name="text" autocomplete="off" placeholder="comment">
+
+                                     <input type="email" name="emails" autocomplete="off" placeholder="email" class="emails">
+
+                                     <br /><input type="submit" class="submit" value='Submit'>
+
+                                    </form>
+
+                                  @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                        @foreach($errors->all() as $error)
+                                            <p>{{ $errors->first('emails') }}</p>
+                                         @endforeach
+                                        </ul>
+                                    </div>
+                                  @endif
+                          </div>
+                        </div>
+                      
+                  <footer>
+                <!--<h3 class="footerLeft">
                     <font color="white">
                     <a href="mailto:gelmangreg@gmail.com?Subject=Hello%20Mr%20Gelman" target="_top">
                     e: gelmangreg@gmail.com</a><a href="callto:6093168588"><br />
                     c: (609)316-8588</a></font>
-                </h3>
-                <h3 class="footerRight">
+                </h3>-->
+                <h3 class="footerLeft">
                   <font color="white">
-                    <a href="https://linkedin.com/in/greggel">LinkedIn</a>
-                    <a href="https://github.com/greggel">Github</a>
+                    <a href="https://linkedin.com/in/greggel">LinkedIn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="https://github.com/greggel">Github&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                     <a href="/img/GregGelmanResume.pdf" download>Resume</a><br />
-
                   </font>
                 </h3>
 
-   
+      
             </footer>
 
    </body>
