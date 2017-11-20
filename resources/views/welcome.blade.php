@@ -2,23 +2,24 @@
 <html lang="en" style="display: inline-grid;">
     <head>
         <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="icon" type="image/png" href="/img/logos/icon.png">
         <title>Greg Gelman</title>
 
         <!-- Fonts 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">-->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
         <style>
         #resume {
 
         }
 
         .face {
-          height:275px;
-          margin:105px 95px auto;
+          height: 160px;
         }
 
         .faceShot {
@@ -41,7 +42,7 @@
         display: inline-block;
         position: relative;
         z-index: 2;
-        margin-top:100px;
+        
         }
         
         #footer {
@@ -50,21 +51,7 @@
         }
 
           .section1 {
-          position: relative;
-          background-color: #a7cdf2;
-          height: 400px;
-          width: 20%;
-          display: block;
-          left: 0;
-          float: left;
-          background-position: 50% 90%;
-          background-repeat: no-repeat;
-          margin:-80px;
-          padding:0px;
-          margin-left:0px;
-          padding-left:0px;
-          padding-top:0px;
-          z-index: 3;
+          width: 100%;
         }
 
         .relative
@@ -73,17 +60,10 @@
           height:400px;
         }
 
-        .sideText {
-        margin-top: 126px;
-        margin-bottom: 109px;
-        height: 30%;
-        width: 1000px;
-        margin-left: 409px;
-        z-index: 1;
-        }
+        
         .side {
         width: 80%;
-        margin:-45px;
+        
         }
         
         .side span
@@ -176,7 +156,7 @@
         .section2boxLeft 
         {
           position: relative;       
-          width: 50%;
+          width: 100%;
           float: left;
           left: 0;
           display: block;
@@ -184,14 +164,14 @@
 
         .section2Left
         {
-          /* margin-top: 25%; */
-          background: black;
-          padding: 12px;
-          /* padding-bottom: 21px; */
-          width: 579px;
-          overflow: hidden;
-          height: 400px;
-          margin-left: 55px;
+              /* margin-top: 25%; */
+              background: black;
+              padding: 0px 10px 32px 10px;
+              /* padding-bottom: 21px; */
+              width: 55%;
+              overflow: hidden;
+              height: 500px;
+              margin-left: 22%;
         }
 
         .section2boxRight 
@@ -408,18 +388,28 @@
 
            .fb-like.fb_iframe_widget iframe{
                 width: 282px !important;
-                margin: 46px 58px auto;
+                margin: 0px 100px auto;
           }
 
-          input {
+          form input {
             height: 21px;
             margin-bottom:10px;
             width: 260px;
           }
 
+          input {
+            height: 21px;
+            margin: 10px 0px 10px 0px;
+            width: 100px;
+           }
+
           #googleMap {
               width: 100%;
-              height: 400px;
+              height: 100%;
+          }
+
+          table {
+            width:0px;
           }
 
         @media screen and (max-width: 768px) {
@@ -434,35 +424,32 @@
 
 
            .fb-like.fb_iframe_widget iframe{
-            margin: 172px -25px auto;
+            margin:-11px 115px auto;
             /* margin-top: 148px; */
-            width: 100% !important;
+            width: 60% !important;
           }
 
            .fb-like.fb_iframe_widget table{
             width: 205px !important;
           }
 
-         /*.section1 {
-            width: 340px;
-            height: 240px;
-            background-size: 200px 240px;
-            background-position: 50% 80%;
-            margin: auto;
-            text-align: left;
-            position: relative;
-          }*/
+         .section1 {
+            margin-top:-50px;
+            width:100%;
+            height:286px;
+          }
           .face {
-            margin: 100px auto;
-            height: 365px;
+            margin: 70px auto;
+            height: 160px;
           }
           .side {
             width:100%;
+            margin:0 auto;
 
           }
 
           .sideText {
-            margin: 30px 43px;
+            margin: 145px auto;
             /* height: 137%; */
             width: 100%;
             position: relative;
@@ -480,6 +467,11 @@
 
           .section1 {
             width: 100%;
+            height:285px;
+          }
+
+          .section1 h1 {
+            margin: -50px auto;
           }
 
           span {
@@ -491,14 +483,14 @@
           .section2boxLeft 
         {
           position: relative;
-          height: 100%;
           width: 100%;
         }
 
         .section2Left
         {
-          margin: 0 auto;
-          width: 79%;
+          margin: 15% auto auto 2%;
+          width: 93%;
+          height:555px;
         }
 
         .section2boxLeft li {
@@ -509,7 +501,7 @@
         {
           position: relative;
           width: 100%;
-          height:460px;
+          height:480px;
           margin-top:20%;
           
           /* float: inherit; */
@@ -605,6 +597,14 @@
            width:100%;
           }
 
+          .section4 {
+            margin:20px auto;
+          }
+
+          .section5 {
+              
+          }
+
           ol {
             text-align:center;
           }
@@ -639,9 +639,125 @@
             right: 0;
           }
 
+          input {
+            height: 21px;
+            margin: 10px 10px 8px 5px;
+            width: 100px;
+           }
+
          }
 
         </style>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyDlTiKrTcprGMI9K2-ANpT0FZyFrkjbs&callback=initMap" async defer></script>
+              <script>
+                  var map, infoWindow, marker;
+                  function initMap() {
+                        map = new google.maps.Map(document.getElementById('googleMap'), {
+                        center: {lat: 32.02999636902566, lng: -27.4296875},
+                        zoom: 2
+                      });
+                   
+
+                      $.ajax({ url: "/strangers"}).done(function(response) {   
+
+                      
+                      var strangers = response.strangers;
+                      
+                      strangers.forEach(function(stranger){
+                    
+                              var contentString =   
+                               '<div id="markerContent"><br />'+
+                               '<h4>'+stranger.hits+' Hits from '+stranger.city+', '+stranger.regionName+'<br />'+
+                               'on '+stranger.updated_at+'</h4>'+
+                               'using '+stranger.browser+
+                               '<div id="markerContent"><br />'
+                               ;
+
+                              var infowindow = new google.maps.InfoWindow({
+                                content: contentString
+                              }); 
+
+                              var labels = stranger.hits.toString();     
+
+                              var marker = new google.maps.Marker({
+                                 position: {lat: parseFloat(stranger.lat), lng: parseFloat(stranger.lng)},
+                                 map: map,
+                                 label: labels,
+                                 animation: google.maps.Animation.DROP,
+                                 title: 'info'
+                               });
+
+                              marker.addListener('click', toggleBounce);
+                           
+                              marker.addListener('click', function() {
+                                infowindow.open(map, marker);
+                                });
+
+                              function toggleBounce() {
+                    if (marker.getAnimation() !== null) {
+                      marker.setAnimation(null);
+                    } else {
+                      marker.setAnimation(google.maps.Animation.BOUNCE);
+                    }
+                  }
+
+                              
+
+                      //console.log(stranger);
+
+                      });
+
+                    });
+
+
+
+                  }                 
+                  
+                  /*$.getJSON("https://api.ipify.org/?format=json", function(e) {
+                    $.ajax("http://ip-api.com/json/" + e.ip + " ", {
+                                       success: function(response) {
+                                       //console.log(response.lat);
+                                       //console.log(response.lon);
+                                      
+                                          lat = response.lat;
+                                          lon = response.lon;
+                                          city = response.city;    
+
+                                          var contentString =   
+                                             '<div id="markerContent"><br />'+city+
+                                             '<h3>'+'e: gelmangreg@gmail.com'+'</h3>'+
+                                             '<h3>'+'c: (609)316-8588'+
+                                             '<a href="https://linkedin.com/in/greggel">'+
+                                             '<font color="black">'+'<br /><br />LinkedIn<br />'+'</a>'+'</font>'+
+                                             '<a href="https://github.com/greggel">'+
+                                             '<font color="black">'+'Github<br />'+'</a>'+'</font>'+
+                                             '<a href="/img/GregGelmanResume.pdf" download>'+
+                                             '<font color="black">'+'Resume'+'</a>'+'</font>'+
+                                             '<div id="markerContent"><br />'
+                                             ;
+
+                                            var infowindow = new google.maps.InfoWindow({
+                                              content: contentString
+                                            });      
+
+                                            var marker = new google.maps.Marker({
+                                               position: {lat: lat, lng: lon},
+                                               map: map,
+                                               title: 'info'
+                                             });
+
+                                        
+
+                                            marker.addListener('click', function() {
+                                              infowindow.open(map, marker);
+                                              });
+                                        }
+                                      });
+                                    }); */           
+              
+
+              </script>
+
     </head>
     <body> 
               <!--<div class="title">
@@ -655,51 +771,32 @@
 
               <div class="section1">
                 <div class="faceShot">
-                  <img src="img/face.png" class="face" />
+                  <img src="img/head.png" class="face" />
+                  <h1>CISSP Security and Automation Aficionado</h1>
                   <a name="about"></a>
                 </div>
               </div>
 
-              <div class="side">
-                <div class="facebookLike">  
-                  <div
-                    style="vertical-align: sub;"
-                      class="fb-like"
-                      data-share="true"
-                      data-show-faces="true">
-                  </div>
-                </div>
 
-                <div class="sideText">
-                  <h1>CISSP Systems Security Analyst, Systems Administrator and Entrepeneur</h1><br /><br /><hr/>
-                      
-                </div>
+           <div class="side">
 
-            <script>      
-              window.fbAsyncInit = function() {
-                FB.init({
-                  appId      : '1678417975792547',
-                  xfbml      : true,
-                  version    : 'v2.6'
-                });
-              };
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1678417975792547";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>    
 
-              (function(d, s, id){
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {return;}
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js";
-                fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));      
-            </script>
           </div>
                
-              <div class="section2boxRight">
+              <!-- <div class="section2boxRight">
                   <div class="section2">
                             <a name="education"></a>
                             <h1 style="font-size:38px">Education</h1>
                                <h2><ul>University of Delaware: Masters of Engineering</ul></h2>
-                               <li>CyberSecurity (Currently Enrolled)</li>
+                               <li>CyberSecurity</li>
                               <h2><ul>Rutgers University: Bachelors of Arts</ul></h2>
                               <li>Information Technology and Informatics</li>
                               <h2><ul>Raritan Valley Community College: Associates Degree </ul></h2> 
@@ -709,7 +806,7 @@
                               Security+</h2>
                           
                   </div>
-             </div>
+             </div> -->
             
              <div class="section2boxLeft">
                  <div class="section2Left">
@@ -735,90 +832,46 @@
                                   </ol>  
                      </div>
                   -->
-                 <div id="googleMap"></div>
-                 <script>
-                    var map, infoWindow;
-                    function initMap() {
-                      map = new google.maps.Map(document.getElementById('googleMap'), {
-                        center: {lat: 40.2170534, lng: -74.74293840000001},
-                        zoom: 7
-                      });
-                    
-              var contentString = 
-               '<div id="markerContent">'+
-               '<h3>'+'e: gelmangreg@gmail.com'+'</h3>'+
-               '<h3>'+'c: (609)316-8588'+
-               '<a href="https://linkedin.com/in/greggel">'+
-               '<font color="black">'+'<br /><br />LinkedIn<br />'+'</a>'+'</font>'+
-               '<a href="https://github.com/greggel">'+
-               '<font color="black">'+'Github<br />'+'</a>'+'</font>'+
-               '<a href="/img/GregGelmanResume.pdf" download>'+
-               '<font color="black">'+'Resume'+'</a>'+'</font>'+
-               '<div id="markerContent">'
-               ;
+                 <h3><font color="white">Visitors</font></h3>
+                 <div id="googleMap"></div><br />
 
-              var infowindow = new google.maps.InfoWindow({
-                content: contentString
-              });
-
-               var marker = new google.maps.Marker({
-                 position: {lat: 40.2170534, lng: -74.74293840000001},
-                 map: map,
-                 title: 'info'
-               });
-        
-                marker.addListener('click', function() {
-                  infowindow.open(map, marker);
-                });
-
-
-                    }
-
-                  </script>
-                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyDlTiKrTcprGMI9K2-ANpT0FZyFrkjbs&callback=initMap"
-                  async defer></script>
                 </div>   
              </div>
 
              <div class="section5">
                                <div class=icons>
                                   <br />
-                                    <img height="60" src="img/logos/puppet-labs-logo.png" />
-                                    <img height="60" src="img/logos/bash.png" />
-                                    <img height="60" src="img/logos/Dell-KACE-logo.png" />
-                                    <img height="60" src="img/logos/powershell-icon-0.png" />
-                                    <img height="60" src="img/logos/css3.png" />
-                                    <img height="60" src="img/logos/html5.png" />
-                                    <img height="60" src="img/logos/apache.png" />
-                                    <img height="60" src="img/logos/page-mysql.png" />
-                                    <img height="60" src="img/logos/mongo-db-huge-logo-1024x341.png" />
-                                    <img height="60" src="img/logos/laravel.png" />
-                                    <img height="60" src="img/logos/vmware-logo.png" />
-                                    <img height="60" src="img/logos/Aaad1.png" />
-                                    <img height="60" src="img/logos/microsoft.png" />
+                                  <img height="60" src="img/logos/microsoft.png" />
                                     <img height="60" src="img/logos/linux_u2.png" />
                                     <img height="60" src="img/logos/Apple-logo.png" />
                                     <img height="60" src="img/logos/redhat.png" />
                                     <img height="60" src="img/logos/Debian.png" />
-                                    <img height="60" src="img/logos/Ubuntu.png" />
-                                    <img height="60" src="img/logos/android.png" />
-                                    <img height="60" src="img/logos/PHP-Logo.png " />
-                                    <img height="60" src="img/logos/python.png" />
-                                    <img height="60" src="img/logos/C++-unofficial.sh-600x600.png" />
-                                    <img height="60" src="img/logos/java-logo-transparent.png " />
-                                    <img height="60" src="img/logos/mcafee.png" />
-                                    <img height="90" src="img/logos/curl-logo.png" />
-                                    <img height="50" src="img/logos/nessus.png" />
-                                    <img height="60" src="img/logos/openvas.png" />
+                                    <img height="60" src="img/logos/puppet-labs-logo.png" />
+                                    <img height="60" src="img/logos/bash.png" />
+                                    <img height="60" src="img/logos/powershell-icon-0.png" />
+                              </div>
+                              <div>
+     			      	                  <img height="60" src="img/logos/page-mysql.png" />
+				                            <img height="60" src="img/logos/PHP-Logo.png" />
+                                    <img height="60" src="img/logos/laravel.png" />
+                                    <img height="60" src="http://www.pngall.com/wp-content/uploads/2016/05/Python-Logo-PNG-Image-180x180.png" />
+                                    <img height="60" src="http://www.ahsanarif.com/oraclepdf/c/images/Clogosmall.png" />
+                                    <img height="60" src="img/logos/css3.png" />
+                                    <img height="60" src="img/logos/html5.png" />
+                                    <img height="60" src="https://seeklogo.com/images/J/javascript-logo-E967E87D74-seeklogo.com.png" />
+                              </div>
+	                        <div class="icons">
+                                    
+                                    <img height="50" width="140" src="img/logos/nessus.png" />
                                     <img height="60" src="img/logos/checkpoint_color.png" />
                                     <img height="60" src="img/logos/pfsense.png" />
-                                    <img height="60" src="img/logos/splunk.png" /> 
-                                    <img height="40" src="img/logos/graylog.png" />
-                                    <img height="60" src="img/logos/symantec.png" />
-                                    <img height="40" src="img/logos/Veeam-Logo.png" />
-                                    <img height="60" src="img/logos/git.sh-600x600.png" />              
-                                    <img height="60" src="img/logos/wireshark.png" />
-                                    <img height="60" src="img/logos/wordpress.png" />                        
+                                    <img height="60" src="img/logos/splunk.png" />
+                              </div>
+                              <div>
+                                    <img height="60" src="img/logos/vmware-logo.png" />
+                                    <img height="60" src="https://www.docker.com/sites/default/files/mono_vertical_large.png" />
+                                    <img height="60" src="img/logos/git.sh-600x600.png" />
+                                    <img height="60" src="img/logos/mcafee.png" />
                               </div>
                      </div>     
 
@@ -834,9 +887,7 @@
                                    document.getElementById("myNav").style.width = "0%";
                                   }
                           </script>-->
-                         <div class="section3">
-
-                         </div>
+                          <div id="coord"></div>
                          <div class="section4">
                             <font color="white">Leave me a comment</font>
                                     <form class="emails" action="register" methods="POST" name="emails" id="emails">
@@ -850,6 +901,9 @@
                                      <br /><input type="submit" class="submit" value='Submit'>
 
                                     </form>
+
+                            <div class="fb-like" data-href="http://greggelman.com" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                          
 
                                   @if ($errors->any())
                                     <div class="alert alert-danger">
@@ -872,9 +926,9 @@
                 </h3>-->
                 <h3 class="footerLeft">
                   <font color="white">
-                    <a href="https://linkedin.com/in/greggel">LinkedIn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                    <a href="https://github.com/greggel">Github&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                    <a href="/img/GregGelmanResume.pdf" download>Resume</a><br />
+                    <input type="button" value="LinkedIn" text="Download Resume" autofocus onclick="window.location.href='https://linkedin.com/in/greggel'">
+                    <input type="button" value="Github" text="Download Resume" autofocus onclick="window.location.href='https://github.com/greggel'">
+                    <input type="button" value="Resume" text="Download Resume" autofocus onclick="window.location.href='/GregGelmanResume.pdf'"></input><br />
                   </font>
                 </h3>
 

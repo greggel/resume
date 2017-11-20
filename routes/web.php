@@ -27,7 +27,7 @@
 */
 
 Route::get('/', [
-	'middleware' =>'stranger',
+	'middleware' =>'strangerMiddleware',
 	function() {
 		return view('welcome');	
 }]);
@@ -35,22 +35,9 @@ Route::get('/', [
 Route::post('/register', 'RegisterController@register')->middleware('visitor'); 
 Route::get('/register', 'RegisterController@register')->middleware('visitor');
   
-Route::get('about', function () {
-
-		$people = ['Taylor', 'Matt', 'Jeffrey'];
-    	return view('pages.about',compact('people')); //resources/views/pages/about.blade.php
-		//return view('pages.about', compact('people'));
-
-    });
-
-/*Route::get('/hits', function() {
-
-	return View::make('pages.hits')->with('data', App\hits::all()->where('hits','>',1));
-
-});*/
-
 Route::get('/hits', 'hitViews@ipHits');
 
+Route::get('/strangers', 'StrangerController@index');
 
 
 
