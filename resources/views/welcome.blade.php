@@ -649,14 +649,7 @@
 
         </style>
                   <script>
-                        var map, infoWindow, marker;
-                          
-                        function initMap() {
-                                map = new google.maps.Map(document.getElementById('googleMap'), {
-                                center: {lat: 32.02999636902566, lng: -27.4296875},
-                                zoom: 2
-                          });
-                        }
+
                $.ajax({url: "/strangers"}).done(function(response) {
 
                       var strangers = response.strangers;
@@ -786,7 +779,16 @@
           
           
           <div id="googleMap"></div>
-
+          <script>
+              var map, infoWindow, marker;
+                          
+              function initMap() {
+                      map = new google.maps.Map(document.getElementById('googleMap'), {
+                      center: {lat: 32.02999636902566, lng: -27.4296875},
+                      zoom: 2
+                });
+              }
+          </script>
 
              </div>   
              </div>
