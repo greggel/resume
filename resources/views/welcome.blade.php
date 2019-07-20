@@ -858,7 +858,9 @@
                   </font>
                 </h3>
 
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defer>
+                <script async defer 
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap">
+                </script>
             </footer>
             
       <\body>
