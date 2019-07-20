@@ -657,9 +657,7 @@
                         zoom: 2
                 });
 
-                //google.maps.event.addDomListener(window, "load", init); 
-                  
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defer><\script> 
+                //google.maps.event.addDomListener(window, "load", init);
                $.ajax({url: "/strangers"}).done(function(response) {
 
                       var strangers = response.strangers;
@@ -783,7 +781,7 @@
                     I am A Cyber Security Expert with extensive knowledge web applications and datacenter infrastructure.  I am looking to grow my social network and learn from the fellow security folks in the industry.  Feel free to contact me at greggel@greggelman.com. 
                   </p>
                  <h3><font color="white">Visitors from this week.</font></h3>
-		<div id="googleMap"></div>
+		      <div id="googleMap"></div>
 
                 </div>   
              </div>
@@ -858,4 +856,5 @@
       
             </footer>
 <\body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defer><\script> 
 <\html>
