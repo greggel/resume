@@ -652,7 +652,7 @@
                $.ajax({url: "/strangers"}).done(function(response) {
 
                       var strangers = response.strangers;
-                      strangers.forEach(function(stranger){
+                      strangers.forEach(function(strangers){
                               var contentString =
                                '<div id="markerContent"><br />'+
                                '<h4>'+stranger.hits+' Hits from '+stranger.city+', '+stranger.regionName+'<br />'+
