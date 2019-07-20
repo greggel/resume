@@ -648,6 +648,7 @@
          }
 
         </style>
+                <script>
                 var map, infoWindow, marker;
             
                 function initMap() {
