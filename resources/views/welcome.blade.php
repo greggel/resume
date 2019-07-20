@@ -656,7 +656,7 @@
                       strangers.forEach(function(stranger){
                               var contentString =
                                '<div id="markerContent"><br />'+
-                               '<h4>'+stranger.hits+' Hits from '+stranger.city+', '+stranger.regionName+'<br />'+
+                               'Hits from '+stranger.city+', '+stranger.regionName+'<br />'+
                                'on '+stranger.updated_at+'</h4>'+
                                'using '+stranger.browser+
                                '<div id="markerContent"><br />'
@@ -780,7 +780,6 @@
           
           <div id="googleMap"></div>
           <script>
-              document.addEventListener('touchstart', handler, {passive: true});
               var map, infoWindow, marker;
                           
               function initMap() {
