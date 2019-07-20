@@ -658,7 +658,7 @@
                 });
               }
 
-              googleMaps.maps.event.addDomListener(window, "load", init);
+              map.maps.event.addDomListener(window, "load", init);
                $.ajax({url: "/strangers"}).done(function(response) {
 
                       var strangers = response.strangers;
