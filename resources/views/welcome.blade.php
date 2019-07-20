@@ -789,7 +789,9 @@
                 });
               }
           </script>
-
+          <script async defer 
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap">
+           </script>
              </div>   
              </div>
              <div class="section5">
@@ -859,10 +861,6 @@
                     <input type="button" value="Github" text="GitHub" autofocus onclick="window.location.href='https://github.com/greggel'">
                   </font>
                 </h3>
-
-                <script async defer 
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap">
-                </script>
             </footer>
             
       <\body>
