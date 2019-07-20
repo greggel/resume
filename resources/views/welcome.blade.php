@@ -649,14 +649,6 @@
 
         </style>
                 <script>
-                var map, infoWindow, marker;
-            
-                function initMap() {
-                        map = new google.maps.Map(document.getElementById('googleMap'), {
-                        center: {lat: 32.02999636902566, lng: -27.4296875},
-                        zoom: 2
-                });
-              }
                $.ajax({url: "/strangers"}).done(function(response) {
 
                       var strangers = response.strangers;
@@ -782,11 +774,23 @@
                     I am A Cyber Security Expert with extensive knowledge web applications and datacenter infrastructure.  I am looking to grow my social network and learn from the fellow security folks in the industry.  Feel free to contact me at greggel@greggelman.com. 
                   </p>
                  <h3><font color="white">Visitors from this week.</font></h3>
-		      <div id="googleMap"></div>
+          
+          
+          <div id="googleMap"></div>
+          <script>
+          var map, infoWindow, marker;
+            
+          function initMap() {
+                  map = new google.maps.Map(document.getElementById('googleMap'), {
+                  center: {lat: 32.02999636902566, lng: -27.4296875},
+                  zoom: 2
+            });
+          }
+          </script>
 
-                </div>   
+             </div>   
              </div>
-              <div class="section5">
+             <div class="section5">
                                <div>
                                 <br />
                                     <img height="60" src="img/logos/puppet-labs-logo.png" />
