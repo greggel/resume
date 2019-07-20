@@ -780,6 +780,7 @@
           
           <div id="googleMap"></div>
           <script>
+              document.addEventListener('touchstart', handler, {passive: true});
               var map, infoWindow, marker;
                           
               function initMap() {
