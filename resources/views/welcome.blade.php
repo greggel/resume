@@ -667,7 +667,7 @@
                                'on '+stranger.updated_at+'</h4>'+
                                'using '+stranger.browser+
                                '<div id="markerContent"><br />'
-                               ;
+                                ;
 
                               var infowindow = new google.maps.InfoWindow({
                                 content: contentString
@@ -689,6 +689,8 @@
                                 infowindow.open(map, marker);
                                 });
 
+                            });
+
                    function toggleBounce() {
                     if (marker.getAnimation() !== null) {
                       marker.setAnimation(null);
@@ -698,7 +700,7 @@
                   }
                  console.log(stranger);
                  });
-             }); 
+             
               </script>
               <p hidden>I am A Cyber Security Expert with extensive knowledge web applications and datacenter infrastructure.  I am looking to grow my social network and learn from the fellow security folks in the industry.  Feel free to contact me at greggel@greggelman.com.</p>
     </head>
