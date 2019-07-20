@@ -638,7 +638,7 @@
             position: fixed;
             bottom: 0;
             right: 0;
-	}
+          }
 
           input {
             height: 21px;
@@ -648,22 +648,20 @@
 
          }
 
-        </style
-        <script 
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" 
-async defer></script>
-            <script>
-                var map, infoWindow, marker;
+        </style>
+ 
+       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defe$
+        google.maps.event.addDomListener(window, "load", init)
+        </script>             <script>
+                  var map, infoWindow, marker;
 
-	        function initMap() {
+	          function initMap() {
         	        map = new google.maps.Map(document.getElementById('googleMap'), {
-        	        center: {lat: 32.02999636902566, lng: -27.4296875},
+               	        center: {lat: 32.02999636902566, lng: -27.4296875},
                 	zoom: 2
         	});
-
-	        google.maps.event.addDomListener(window, "load", init); 
-
-               $.ajax({url: "/strangers"}).done(function(response) {
+              	google.maps.event.addDomListener(window, "load", init)
+                  $.ajax({url: "/strangers"}).done(function(response) {
 
                       var strangers = response.strangers;
                       strangers.forEach(function(stranger){
@@ -695,16 +693,21 @@ async defer></script>
                                 infowindow.open(map, marker);
                                 });
 
-                   function toggleBounce() {
+                              function toggleBounce() {
                     if (marker.getAnimation() !== null) {
                       marker.setAnimation(null);
                     } else {
                       marker.setAnimation(google.maps.Animation.BOUNCE);
                     }
                   }
-                 console.log(stranger);
-                 });
-             }); 
+
+                              
+
+                      console.log(stranger);
+
+                      });
+
+                    }); 
               </script>
               <p hidden>I am A Cyber Security Expert with extensive knowledge web applications and datacenter infrastructure.  I am looking to grow my social network and learn from the fellow security folks in the industry.  Feel free to contact me at greggel@greggelman.com.</p>
     </head>
@@ -786,6 +789,15 @@ async defer></script>
                     I am A Cyber Security Expert with extensive knowledge web applications and datacenter infrastructure.  I am looking to grow my social network and learn from the fellow security folks in the industry.  Feel free to contact me at greggel@greggelman.com. 
                   </p>
                  <h3><font color="white">Visitors from this week.</font></h3>
+		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defe$
+        	 <script>
+        	 function initMap() {
+                 	map = new google.maps.Map(document.getElementById('googleMap'), {
+                 	center: {lat: 32.02999636902566, lng: -27.4296875},
+                 	zoom: 2
+        	  });
+        	  google.maps.event.addDomListener(window, "load", init)
+        	  </script>
 		<div id="googleMap"></div>
 
                 </div>   
@@ -860,12 +872,5 @@ async defer></script>
 
       
             </footer>
-
-/*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defer><\script> 
-<script> 
-  var map, infoWindow, marker;
-  function initMap() { map = new google.maps.Map(document.getElementById('googleMap' center: {lat: 32.02999636902566, lng: -27.4296875}, zoom: 2 });
-  google.maps.event.addDomListener(window, "load", init)
-<\script>*/
-<\body>
-<\html>
+    </body>
+</html>

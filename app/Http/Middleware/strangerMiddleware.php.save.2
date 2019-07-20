@@ -35,47 +35,37 @@ public function handle($request, Closure $next)
     		),
 	);
 
-//        $ip = $_SERVER['REMOTE_ADDR'];
-//        $publicIP = file_get_contents('https://api.ipify.org/?format=json');
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $publicIP = file_get_contents('https://api.ipify.org/?format=json');
+	console_log($publicIP);
 
-//	console_log($ip);
-//	console_log($publicIP);
 
 	// Function to get the real client ip address
-	function get_client_ip_server() {
-	    $ipaddress = '';
-
-	    if (array_key_exists('HTTP_CLIENT_IP', $_SERVER)){
-    		$clientIP = $_SERVER['HTTP_CLIENT_IP'];
-		console_log($ipaddress);}
-	    elseif (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)){
-	        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-		console_log($ipaddress);}
-	    elseif (array_key_exists('HTTP_X_FORWARDED', $_SERVER)){
-	        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-		console_log($ipaddress);}
-	    elseif (array_key_exists('HTTP_FORWARDED_FOR', $_SERVER)){
-	        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-		console_log($ipaddress);}
-	    elseif (array_key_exists('HTTP_FORWARDED', $_SERVER)){
-	        $ipaddress = $_SERVER['HTTP_FORWARDED'];
-		console_log($ipaddress);}
-	    elseif (array_key_exists('REMOTE_ADDR', $_SERVER)){
-	        $ipaddress = $_SERVER['REMOTE_ADDR'];
-		console_log($ipaddress);}
-	    else{
-	        $ipaddress = 'UNKNOWN';
-		console_log($ipaddress);
-		}
+function get_client_ip_server() {
+    $ipaddress = '';
+    if ($_SERVER['HTTP_CLIENT_IP'])
+        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+    else if($_SERVER['HTTP_X_FORWARDED_FOR'])
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    else if($_SERVER['HTTP_X_FORWARDED'])
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+    else if($_SERVER['HTTP_FORWARDED_FOR'])
+        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+    else if($_SERVER['HTTP_FORWARDED'])
+        $ipaddress = $_SERVER['HTTP_FORWARDED'];
+    else if($_SERVER['REMOTE_ADDR'])
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
+    else
+        $ipaddress = 'UNKNOWN';
  
-    	return $ipaddress;
-	}
+    return $ipaddress;
+}
 
-        if (strpos(get_client_ip_server(),'192.168') !== false) {
-            $response1 = file_get_contents('http://api.ipstack.com/'.get_client_ip_server().'?access_key=b67005e171d5dea746de04097d400193&format=1', false, stream_context_create($arrContextOptions));
+        if (strpos($ip,'192.168') !== false) {
+            $response1 = file_get_contents('http://api.ipstack.com/'.$publicIP.'?access_key=b67005e171d5dea746de04097d400193&format=1', false, stream_context_create($arrContextOptions));
             $response1 = json_decode($response1, true);    
             Stranger::create([
-                'ip'   => get_client_ip_server(),
+                'ip'   => $publicIP,
                 'created_at' => date('Y-m-d'),
                 'browser' => $_SERVER['HTTP_USER_AGENT'],
                 'http_referer' => Request::server('HTTP_REFERER'),
@@ -87,10 +77,10 @@ public function handle($request, Closure $next)
             return $next($request);
         }
         else {
-            $response2 = file_get_contents('http://api.ipstack.com/'.get_client_ip_server().'?access_key=b67005e171d5dea746de04097d400193&format=1');
+            $response2 = file_get_contents('http://api.ipstack.com/'.$publicIP.'?access_key=b67005e171d5dea746de04097d400193&format=1');
             $response2 = json_decode($response2, true);    
             Stranger::create([
-                'ip' 	=> get_client_ip_server(),
+                'ip'   => $_SERVER['REMOTE_ADDR'],
                 'created_at' => date('Y-m-d'),
                 'browser' => $_SERVER['HTTP_USER_AGENT'],
                 'http_referer' => Request::server('HTTP_REFERER'),                    
@@ -100,7 +90,8 @@ public function handle($request, Closure $next)
                 'regionName' => $response2['region_name'],
                 ]);
             return $next($request);
+        var_dump($response2);
+        var_dump($response1);
         }
-
     }
 }
