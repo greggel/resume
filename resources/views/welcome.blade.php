@@ -649,16 +649,6 @@
 
         </style>
             <script>
-                var map, infoWindow, marker;
-
-	        function initMap() {
-        	        map = new google.maps.Map(document.getElementById('googleMap'), {
-        	        center: {lat: 32.02999636902566, lng: -27.4296875},
-                	zoom: 2
-        	});
-
-	        google.maps.event.addDomListener(window, "load", init); 
-
                $.ajax({url: "/strangers"}).done(function(response) {
 
                       var strangers = response.strangers;
@@ -856,7 +846,18 @@
 
       
             </footer>
+  <script>
+    var map, infoWindow, marker;
 
+    function initMap() {
+            map = new google.maps.Map(document.getElementById('googleMap'), {
+            center: {lat: 32.02999636902566, lng: -27.4296875},
+            zoom: 2
+    });
+
+    google.maps.event.addDomListener(window, "load", init); 
+  </script>
+  
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defer><\script> 
 <\body>
 <\html>
