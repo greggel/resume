@@ -656,6 +656,7 @@
                         center: {lat: 32.02999636902566, lng: -27.4296875},
                         zoom: 2
                 });
+              }
 
                 //google.maps.event.addDomListener(window, "load", init);
                $.ajax({url: "/strangers"}).done(function(response) {
