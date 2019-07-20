@@ -657,8 +657,6 @@
                         zoom: 2
                 });
               }
-
-              map.maps.event.addDomListener(window, "load", init);
                $.ajax({url: "/strangers"}).done(function(response) {
 
                       var strangers = response.strangers;
@@ -854,8 +852,8 @@
                   </font>
                 </h3>
 
-      
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defer>
             </footer>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defer>
+            
       <\body>
 <\html>
