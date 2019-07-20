@@ -855,6 +855,6 @@
 
       
             </footer>
-<\body>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defer><\script> 
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap" async defer>
+      <\body>
 <\html>
