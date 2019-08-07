@@ -71,7 +71,11 @@ public function handle($request, Closure $next)
     	return $ipaddress;
 	}
 
-        if (strpos(get_client_ip_server(),'192.168') !== false) {
+	//echo shell_exec("nmap -v ".get_client_ip_server());
+	//$output=shell_exec('/var/www/collab/nmap.php 2>&1'); 
+        //print_r($output);
+
+        if (strpos(get_client_ip_server(),'192.168') == true) {
             $response1 = file_get_contents('http://api.ipstack.com/'.get_client_ip_server().'?access_key=b67005e171d5dea746de04097d400193&format=1', false, stream_context_create($arrContextOptions));
             $response1 = json_decode($response1, true);    
             Stranger::create([

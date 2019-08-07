@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+        
         <style>
         #resume {
 
@@ -213,7 +213,7 @@
 
         .section4 {
          padding-bottom: 10px;
-         background-color:  #a7cdf2;
+         background-color: black;
         }
         
         .section5 {
@@ -312,7 +312,7 @@
         body { 
           margin:0px;
           background: #ccc;
-          background-color: #a7cdf2;
+          background-color: black;
           font-family: Open Sans;
           /*text-transform: uppercase;*/
           text-align: center; 
@@ -389,21 +389,26 @@
           }
 
           form input {
-            height: 21px;
-            margin-bottom: -7px;
-            margin-top: -10px;
+            height: 32px;
+            margin-bottom: -2px;
+            margin-top: 0px;
             width: 260px;
           }
 
           input {
             height: 21px;
-            margin: 10px -5px -6px 0px;
+            margin: 10px -5px 2px 0px;
             width: 100px;
            }
 
           #googleMap {
               width: 100%;
               height: 100%;
+          }
+
+          .nmap {
+            margin: 0px 15% 0 15%;
+            color:white
           }
 
           table {
@@ -648,15 +653,28 @@
          }
 
         </style>
-                  <script>
-
-               $.ajax({url: "/strangers"}).done(function(response) {
+               <script async defer 
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap">
+               </script>
+               <script>
+                var map, infoWindow, marker;
+                          
+                  function initMap() {
+                          map = new google.maps.Map(document.getElementById('googleMap'), {
+                          center: {lat: 32.02999636902566, lng: -27.4296875},
+                          zoom: 2
+                    });
+                
+               
+                $.ajax({url: "/strangers"}).done(function(response) {
 
                       var strangers = response.strangers;
-                      stranger.forEach(function(strangers){
+                    
+                      strangers.forEach(function(stranger){
+
                               var contentString =
                                '<div id="markerContent"><br />'+
-                               'Hits from '+stranger.city+', '+stranger.regionName+'<br />'+
+                               '<h4>'+stranger.hits+' Hits from '+stranger.city+', '+stranger.regionName+'<br />'+
                                'on '+stranger.updated_at+'</h4>'+
                                'using '+stranger.browser+
                                '<div id="markerContent"><br />'
@@ -691,6 +709,7 @@
                   }
                  });
                 });
+              }
               </script>
               <p hidden>I am A Cyber Security Expert with extensive knowledge web applications and datacenter infrastructure.  I am looking to grow my social network and learn from the fellow security folks in the industry.  Feel free to contact me at greggel@greggelman.com.</p>
     </head>
@@ -705,13 +724,13 @@
                     </span>
               </div>-->
 
-              <div class="section1">
+              {{-- <div class="section1">
                 <div class="faceShot">
                   <img src="img/head.png" class="face" />
                   <h1>Cyber Security Engineer</h1>
                   <a name="about"></a>
                 </div>
-              </div>
+              </div> --}}
 
 
            <div class="side">
@@ -743,31 +762,8 @@
                           
                   </div>
              </div> -->
-            
-             <div class="section2boxLeft">
-                 <div class="section2Left">
-                    <!--
-                      <div class="section2Side3">
-                               <ol style="margin-top:0;"><h1 style="font-size:38px;margin-top:0;">Experience</h1>
-                               <li>Systems Security Analyst</li>
-                               <li>State Forensic IT Investigator</li>
-                               <li>Unix Computer Operator</li>
-                               <li>Web Developer and IT Consultant</li>
-                               </ol>
-                      </div> 
-                      <div class="section2Side4">
-                      
-                                 <ol><h1 style="font-size:38px">Projects</h1>
-                                 <li>Scripting and Automation Services</li>
-                                 <li>Laravel PHP Development</li>
-                                 <li>Backup Administration</li>
-                                 <li>Digital Forensic Investigation Techniques</li>
-                                 <li>Vulnerability Scanning and Remediation</li>
-                                 <li>VMWare and Virtual Infrastructure</li>
-                                 <li>Firewall Administration</li>
-                                  </ol>  
-                     </div>
-                  -->
+            <div class="section2Left">
+                 
                   <p hidden>
                     I am A Cyber Security Expert with extensive knowledge web applications and datacenter infrastructure.  I am looking to grow my social network and learn from the fellow security folks in the industry.  Feel free to contact me at greggel@greggelman.com. 
                   </p>
@@ -775,40 +771,34 @@
           
           
           <div id="googleMap"></div>
-          <script>
-              var map, infoWindow, marker;
-                          
-              function initMap() {
-                      map = new google.maps.Map(document.getElementById('googleMap'), {
-                      center: {lat: 32.02999636902566, lng: -27.4296875},
-                      zoom: 2
-                });
-              }
-          </script>
-          <script async defer 
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap">
-           </script>
-             </div>   
-             </div>
+            </div>         
+          
+          <div class="nmap">
+            <h3><font color="white">Visitors IP Analysis</font></h3>
+            @php
+              $ip=$_SERVER['REMOTE_ADDR'];
+              $ipscan=shell_exec("/usr/bin/machinae -c /etc/machinae.yml $ip");
+              echo nl2br("$ipscan");
+            @endphp
+          </div><br />
+
              <div class="section5">
                                <div>
-                                <br />
+				<h3><font color="white">Built and secured with:</font></h3>
                                     <img height="60" src="img/logos/puppet-labs-logo.png" />
                                     <img height="60" src="img/logos/PHP-Logo.png" />
                                     <img height="60" src="img/logos/laravel.png" />
                                     <img height="60" src="img/logos/page-mysql.png" />
-                                    <img height="60" src="img/logos/python.png" />
                                     <img height="60" src="img/logos/css3.png" />
                                     <img height="60" src="img/logos/html5.png" />
                                     <img height="60" src="img/logos/javascript.png" />
                                     <img height="60" src="img/logos/bash.png" />
-                                    <img height="60" src="img/logos/powershell-icon-0.png" />
                                     <img height="60" src="img/logos/aes.png" />
                                     <img height="60" src="img/logos/snort.png" />
                                     <img height="60" src="img/logos/vmware-logo.png" />
-                                    <img height="60" src="img/logos/mcafee.png" />
-                                    <img height="60" src="img/logos/checkpoint_color.png" />
                                     <img height="60" src="img/logos/pfsense.png" />
+				    <img height="60" src="img/logos/checkpoint.png" />
+    				    <img height="60" src="img/logos/ansible.png" />
                               </div>
                      </div>     
 
@@ -859,5 +849,5 @@
                 </h3>
             </footer>
             
-      <\body>
-<\html>
+          </body>
+</html>
