@@ -7,3 +7,14 @@ Homestead.json
 Homestead.yaml
 .env
 yarn.lock
+.yarn.lock
+.docker
+.zip
+docker-compose.yml
+dump.sql
+nmap.php
+resume.code-workspace
+resume.sql
+scraper.py
+ubuntu_dockerfile
+
