@@ -408,7 +408,7 @@
 
           .nmap {
             margin: 0px 15% 0 15%;
-            color:white
+	    color:white
           }
 
           table {
@@ -778,7 +778,7 @@
             @php
               $ip=$_SERVER['REMOTE_ADDR'];
               $ipscan=shell_exec("/usr/bin/machinae -c /etc/machinae.yml $ip");
-              echo nl2br("$ipscan");
+              echo wordwrap(nl2br("$ipscan"),35,"\n",true);
             @endphp
           </div><br />
 
