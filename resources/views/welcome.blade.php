@@ -654,7 +654,9 @@
 
         </style>
                <script async defer 
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap">
+	//      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl1nLKxNzlcGaxKtVL1qO2aaTblfk8LrA&callback=initMap">
+		src="https://maps.googleapis.com/maps/api/js?key={{env('APP_GOOGLE_MAPS')}}&callback=initMap">
+
                </script>
                <script>
                 var map, infoWindow, marker;
