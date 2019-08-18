@@ -16,16 +16,16 @@ class RegisterController extends Controller
 {
 
     public function register(Request $request)
-    {	
+    {
 
 
-      $this->validate($request, [
-          'emails' => 'required|unique:addresses,name'        
-      ]);
-  /*  
+        $this->validate($request, [
+          'emails' => 'required|unique:addresses,name'
+        ]);
+  /*
        $v = Validator::make($request->all(), [
           'name' => 'bail|required|email|unique:addresses'
-          
+
       ]);
 
       if ($v->fails())
@@ -33,27 +33,27 @@ class RegisterController extends Controller
           return redirect()->back()->withErrors($v->errors());
       }*/
 
-      $emails = Input::get('emails');
-      DB::table('addresses')->insert(
+        $emails = Input::get('emails');
+        DB::table('addresses')->insert(
         ['name' => $emails]
-      );
+        );
 
 
-      Mail::send('emails.register',$request->all(), function ($message) {
+        Mail::send('emails.register', $request->all(), function ($message) {
             $message->from('info@greggelman.com', 'Administrator');
             $message->to('gelmangreg@gmail.com')->subject('new interest!');
         });
 
 
 
-      return redirect('/');
+        return redirect('/');
       
 
 
      /*Schema::table('addresses', function (Blueprint $table) {
         $table->timestamp('created_at');
         $table->increments('id');
-      });*/  	
+      });*/
     }
 
     /*public function withValidator($validator){

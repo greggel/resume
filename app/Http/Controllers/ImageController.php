@@ -7,10 +7,11 @@ use Intervention\Image\Facades\Image;
 
 class ImageController extends Controller
 {
-    public function index(){
-	
-	$img = Image::make('/public/hooded.jpeg')->resize(300, 200);
-    return $img->response('jpeg');
+    public function index()
+    {
+    
+        $img = Image::make('/public/hooded.jpeg')->resize(300, 200);
+        return $img->response('jpeg');
 
     }
 }

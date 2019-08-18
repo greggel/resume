@@ -10,11 +10,11 @@ use View;
 class hitViews extends Controller
 {
 
-	public function ipHits()
-	{
-	    $data = DB::table('stranger')->where('ip','!=','192.168.1.17')->where('ip','!=','67.82.67.17')->get();
-	    return view('pages.hits', compact('data'));
-	}
+    public function ipHits()
+    {
+        $data = DB::table('stranger')->where('ip', '!=', '192.168.1.17')->where('ip', '!=', '67.82.67.17')->get();
+        return view('pages.hits', compact('data'));
+    }
 
 
 }
