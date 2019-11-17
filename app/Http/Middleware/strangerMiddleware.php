@@ -47,22 +47,28 @@ public function handle($request, Closure $next)
 
 	    if (array_key_exists('HTTP_CLIENT_IP', $_SERVER)){
     		$clientIP = $_SERVER['HTTP_CLIENT_IP'];
-		//console_log($ipaddress);}
+		//console_log($ipaddress);
+		}
 	    elseif (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)){
 	        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-		//console_log($ipaddress);}
+		//console_log($ipaddress);
+		}
 	    elseif (array_key_exists('HTTP_X_FORWARDED', $_SERVER)){
 	        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-		//console_log($ipaddress);}
+		//console_log($ipaddress);
+		}
 	    elseif (array_key_exists('HTTP_FORWARDED_FOR', $_SERVER)){
 	        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-		//console_log($ipaddress);}
+		//console_log($ipaddress);
+		}
 	    elseif (array_key_exists('HTTP_FORWARDED', $_SERVER)){
 	        $ipaddress = $_SERVER['HTTP_FORWARDED'];
-		//console_log($ipaddress);}
+		//console_log($ipaddress);
+		}
 	    elseif (array_key_exists('REMOTE_ADDR', $_SERVER)){
 	        $ipaddress = $_SERVER['REMOTE_ADDR'];
-		//console_log($ipaddress);}
+		//console_log($ipaddress);
+		}
 	    else{
 	        $ipaddress = 'UNKNOWN';
 		//console_log($ipaddress);
