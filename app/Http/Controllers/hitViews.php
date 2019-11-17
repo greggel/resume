@@ -12,7 +12,7 @@ class hitViews extends Controller
 
     public function ipHits()
     {
-        $data = DB::table('stranger')->where('ip', '!=', '192.168.1.17')->where('ip', '!=', '67.82.67.17')->get();
+        $data = DB::table('stranger')->where('ip', '!=', '192.168.1.'+'*')->where('ip', '!=', '192.168.252.'+'*')->where('ip', '!=', '68.199.251.36')->get();
         return view('pages.hits', compact('data'));
     }
 

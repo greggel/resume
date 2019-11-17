@@ -20,8 +20,9 @@ class EmailsController extends Controller
     {
      
         Mail::send('emails.sendEmailReminder', $request->all(), function ($message) {
-            $message->from('info@securityfighter.com', 'Security Fighter');
+            $message->from('info@greggelman.com', '@greggel');
             $message->to('gelmangreg@gmail.com')->subject('new interest!');
         });
+        
     }
 }

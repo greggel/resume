@@ -20,18 +20,8 @@ class RegisterController extends Controller
 
 
         $this->validate($request, [
-          'emails' => 'required|unique:addresses,name'
+          'emails' => 'required|email|unique:addresses,name'
         ]);
-  /*
-       $v = Validator::make($request->all(), [
-          'name' => 'bail|required|email|unique:addresses'
-
-      ]);
-
-      if ($v->fails())
-      {
-          return redirect()->back()->withErrors($v->errors());
-      }*/
 
         $emails = Input::get('emails');
         DB::table('addresses')->insert(
@@ -48,23 +38,7 @@ class RegisterController extends Controller
 
         return redirect('/');
       
-
-
-     /*Schema::table('addresses', function (Blueprint $table) {
-        $table->timestamp('created_at');
-        $table->increments('id');
-      });*/
     }
-
-    /*public function withValidator($validator){
-
-        $validator->after(function ($validator) {
-            if ($this->somethingElseIsInvalid()) {
-                $validator->errors()->add('field', 'Something is wrong with this field!');
-            }
-        });
-
-    }*/
     
 }
 
